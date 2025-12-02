@@ -149,18 +149,6 @@ CREATE PROCEDURE sp_InsertTreatment
     @status BIT
 AS
 BEGIN
-    IF NOT EXISTS(
-        SELECT 1 
-        FROM STAFF_ATTENDANCE 
-        WHERE staff_id = @vet_id
-            AND CAST([login] AS DATE) = CAST(GETDATE() AS DATE)
-            AND login <= GETDATE()
-    )
-    BEGIN
-        RAISERROR('Vet has not logged in today!', 16, 1);
-        RETURN;
-    END;
-
     INSERT INTO TREATMENT (treatment_id, drug_id, pet_id, staff_id, schedule, [status]) 
     VALUES (@treatment_id, @drug_id, @pet_id, @vet_id, @schedule, @status);
 END
@@ -188,18 +176,6 @@ CREATE PROCEDURE sp_InsertServes
     @status BIT
 AS
 BEGIN
-    IF NOT EXISTS(
-        SELECT 1 
-        FROM STAFF_ATTENDANCE 
-        WHERE staff_id = @staff_id
-            AND CAST(login AS DATE) = CAST(GETDATE() AS DATE)
-            AND login <= GETDATE()
-    )
-    BEGIN
-        RAISERROR('Staff has not logged in today!', 16, 1);
-        RETURN;
-    END;
-
     INSERT INTO SERVES (serves_id, pet_id, staff_id, schedule, [status]) 
     VALUES (@serves_id, @pet_id, @staff_id, @schedule, @status);
 END
@@ -218,12 +194,11 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE sp_InsertTransact
+ALTER PROCEDURE sp_InsertTransact
     @transact_id INT,
     @cust_id INT,
     @staff_id INT,
     @product_id INT,
-    @schedule DATETIME,
     @status BIT
 AS
 BEGIN
@@ -248,7 +223,7 @@ BEGIN
     BEGIN TRANSACTION;
     BEGIN TRY
         INSERT INTO TRANSACT (transact_id, cust_id, staff_id, product_id, schedule, [status])
-        VALUES (@transact_id, @cust_id, @staff_id, @product_id, @schedule, @status);
+        VALUES (@transact_id, @cust_id, @staff_id, @product_id, GETDATE(), @status);
 
         UPDATE [PRODUCT]
         SET stock = stock - 1
@@ -257,6 +232,7 @@ BEGIN
         COMMIT TRANSACTION;
     END TRY
     BEGIN CATCH
+        PRINT ERROR_MESSAGE();
         ROLLBACK TRANSACTION;
     END CATCH
 END;
@@ -265,11 +241,22 @@ GO
 CREATE PROCEDURE sp_InsertPays
     @payment_id INT,
     @pay_method VARCHAR(50),
-    @datetime DATETIME,
     @cust_id INT,
     @staff_id INT
 AS
 BEGIN
+    IF NOT EXISTS(
+        SELECT 1 
+        FROM STAFF_ATTENDANCE 
+        WHERE staff_id = @staff_id
+            AND CAST(login AS DATE) = CAST(GETDATE() AS DATE)
+            AND login <= GETDATE()
+    )
+    BEGIN
+        RAISERROR('Staff has not logged in today!', 16, 1);
+        RETURN;
+    END;
+
     INSERT INTO PAYS (payment_id, pay_method, [datetime], cust_id, staff_id) 
-    VALUES (@payment_id, @pay_method, @datetime, @cust_id, @staff_id);
+    VALUES (@payment_id, @pay_method, GETDATE(), @cust_id, @staff_id);
 END
