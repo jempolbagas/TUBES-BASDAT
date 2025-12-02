@@ -3173,4 +3173,9 @@ EXEC sp_InsertTransact 96, 97, 96;
 EXEC sp_InsertTransact 97, 98, 97;
 EXEC sp_InsertTransact 98, 99, 98;
 EXEC sp_InsertTransact 99, 100, 99;
+<<<<<<< HEAD
 EXEC sp_InsertTransact 100, 68, 100;
+=======
+EXEC sp_InsertTransact 100, 68, 100;
+>>>>>>> 3aefed8ca200a83cf09424e5f5b92603ebfdbc88
+>>>>>>> edf4001c2eb6429774a1a9338884f49dcf034b14
