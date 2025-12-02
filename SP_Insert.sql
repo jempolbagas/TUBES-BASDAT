@@ -79,6 +79,32 @@ BEGIN
 END
 
 GO
+CREATE PROCEDURE sp_InsertStaffAttendance
+    @attendance_id INT,
+    @staff_id INT,
+    @login DATETIME,
+    @logout DATETIME = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS (SELECT 1 FROM STAFF WHERE id = @staff_id)
+    BEGIN
+        RAISERROR('Staff does not exist.', 16, 1);
+        RETURN;
+    END;
+
+    IF @logout IS NOT NULL AND @login > @logout
+    BEGIN
+        RAISERROR('Login time cannot be later than logout time.', 16, 1);
+        RETURN;
+    END;
+
+    INSERT INTO STAFF_ATTENDANCE (attendance_id, staff_id, [login], logout)
+    VALUES (@attendance_id, @staff_id, @login, @logout);
+END
+
+GO
 CREATE PROCEDURE sp_InsertStaffLogIn
     @staff_id INT
 AS
