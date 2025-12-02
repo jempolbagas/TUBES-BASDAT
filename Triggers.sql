@@ -112,3 +112,27 @@ BEGIN
     JOIN inserted i ON P.id = i.id;
 END;
 GO
+
+CREATE TRIGGER trg_PreventStatusReversal
+ON TREATMENT
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Check if any row was changed from Status 1 (Done) to Status 0 (Not Done)
+    IF EXISTS (
+        SELECT 1 
+        FROM inserted i
+        JOIN deleted d ON i.treatment_id = d.treatment_id 
+            AND i.drug_id = d.drug_id 
+            AND i.pet_id = d.pet_id 
+            AND i.staff_id = d.staff_id
+        WHERE d.[status] = 1 AND i.[status] = 0
+    )
+    BEGIN
+        RAISERROR('Security Alert: Cannot revert a completed treatment status back to incomplete.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
+GO
