@@ -1,5 +1,5 @@
-CREATE DATABASE PetShop
-USE PetShop
+CREATE DATABASE PetShop;
+USE PetShop;
 
 CREATE TABLE CUSTOMER (
     id INT PRIMARY KEY ,
@@ -10,7 +10,7 @@ CREATE TABLE CUST_CONTACT (
     cust_contact VARCHAR(50), 
     cust_id INT,
     
-    PRIMARY KEY (cust_contact), 
+    PRIMARY KEY (cust_contact, cust_id), 
     FOREIGN KEY (cust_id) REFERENCES CUSTOMER(id) ON DELETE CASCADE
 );
 
@@ -33,11 +33,12 @@ CREATE TABLE STAFF (
 );
 
 CREATE TABLE STAFF_ATTENDANCE (
+    attendance_id INT,
+    staff_id INT,
     [login] DATETIME,
     logout DATETIME,
-    staff_id INT,
 
-    PRIMARY KEY (login,logout),
+    PRIMARY KEY (attendance_id, staff_id),
     FOREIGN KEY (staff_id) REFERENCES STAFF(id) ON DELETE CASCADE
 );
 
@@ -83,36 +84,40 @@ CREATE TABLE MEDICAL_RECORD (
 );
 
 CREATE TABLE PAYS (
-    payment_id INT PRIMARY KEY,
-    pay_method VARCHAR(50),
-    [datetime] DATETIME,
+    payment_id INT,
     cust_id INT,
     staff_id INT,
+    pay_method VARCHAR(50),
+    [datetime] DATETIME,
     
+    PRIMARY KEY (payment_id, cust_id, staff_id),
     FOREIGN KEY (cust_id) REFERENCES CUSTOMER(id),
     FOREIGN KEY (staff_id) REFERENCES CASHIER(staff_id)
 );
 
 CREATE TABLE TRANSACT (
+    transact_id INT,
     cust_id INT,
     staff_id INT,  
     product_id INT,
+    schedule DATETIME,
     [status] BIT,
     
-    PRIMARY KEY (cust_id, staff_id, product_id),
+    PRIMARY KEY (transact_id, cust_id, staff_id, product_id),
     FOREIGN KEY (cust_id) REFERENCES CUSTOMER(id),
     FOREIGN KEY (staff_id) REFERENCES CASHIER(staff_id),
     FOREIGN KEY (product_id) REFERENCES [PRODUCT](id)
 );
 
 CREATE TABLE TREATMENT (
-    treatment_id INT PRIMARY KEY,
-    schedule DATETIME,
+    treatment_id INT,
     drug_id INT,
     pet_id INT,
     staff_id INT, 
+    schedule DATETIME,
     [status] BIT,
     
+    PRIMARY KEY (treatment_id, drug_id, pet_id, staff_id),
     FOREIGN KEY (drug_id) REFERENCES DRUG(id),
     FOREIGN KEY (pet_id) REFERENCES PET(id),
     FOREIGN KEY (staff_id) REFERENCES VETERINARIAN(staff_id)
@@ -120,32 +125,41 @@ CREATE TABLE TREATMENT (
 
 CREATE TABLE TREATMENT_SERVICES (
     treatment_id INT,
+    drug_id INT,
+    pet_id INT,
+    staff_id INT, 
     [type] VARCHAR(100), 
     price DECIMAL(10, 2),
-    
 
-    PRIMARY KEY (treatment_id, type), 
-    FOREIGN KEY (treatment_id) REFERENCES TREATMENT(treatment_id) ON DELETE CASCADE
+    PRIMARY KEY (treatment_id, drug_id, pet_id, staff_id, [type]), 
+    FOREIGN KEY (treatment_id, drug_id, pet_id, staff_id) 
+    REFERENCES TREATMENT(treatment_id, drug_id, pet_id, staff_id) 
+    ON DELETE CASCADE
 );
 
 CREATE TABLE SERVES (
-    serves_id INT PRIMARY KEY,
-    schedule DATETIME,
+    serves_id INT,
     pet_id INT,
     staff_id INT,
+    schedule DATETIME,
     [status] BIT,
     
+    PRIMARY KEY (serves_id, pet_id, staff_id),
     FOREIGN KEY (pet_id) REFERENCES PET(id),
     FOREIGN KEY (staff_id) REFERENCES CARE_TAKER(staff_id)
 );
 
 CREATE TABLE SERVES_SERVICES (
     serves_id INT,
+    pet_id INT,
+    staff_id INT,
     [type] VARCHAR(100), 
     price DECIMAL(10, 2),
     
-    PRIMARY KEY (serves_id, type),
-    FOREIGN KEY (serves_id) REFERENCES SERVES(serves_id) ON DELETE CASCADE
+    PRIMARY KEY (serves_id, pet_id, staff_id, [type]),
+    FOREIGN KEY (serves_id, pet_id, staff_id) 
+    REFERENCES SERVES(serves_id, pet_id, staff_id) 
+    ON DELETE CASCADE
 );
 
 SELECT * FROM CUSTOMER

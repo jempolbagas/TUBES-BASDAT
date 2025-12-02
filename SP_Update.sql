@@ -1,4 +1,4 @@
-USE PetShop
+USE PetShop;
 
 GO
 CREATE PROCEDURE sp_UpdateCustomer
@@ -31,8 +31,7 @@ CREATE PROCEDURE sp_UpdateProduct
 AS
 BEGIN
     UPDATE [PRODUCT]
-    SET 
-        [name] = @name,
+    SET [name] = @name,
         stock = @stock,
         price = @price
     WHERE id = @id;
@@ -57,23 +56,24 @@ CREATE PROCEDURE sp_UpdateStaff
 AS
 BEGIN
     UPDATE STAFF
-    SET 
-        [name] = @name,
+    SET [name] = @name,
         [address] = @address
     WHERE id = @id;
 END
 
 GO
 CREATE PROCEDURE sp_UpdateStaffAttendance
+    @attendance_id INT,
+    @staff_id INT,
     @login DATETIME,
-    @logout DATETIME,
-    @staff_id INT
+    @logout DATETIME
 AS
 BEGIN
     UPDATE STAFF_ATTENDANCE
-    SET staff_id = @staff_id
-    WHERE [login] = @login
-      AND logout = @logout;
+    SET [login] = @login,
+        logout = @logout
+    WHERE attendance_id = @attendance_id
+        AND staff_id = @staff_id;
 END
 
 GO
@@ -119,8 +119,7 @@ CREATE PROCEDURE sp_UpdatePet
 AS
 BEGIN
     UPDATE PET
-    SET 
-        [name] = @name,
+    SET [name] = @name,
         species = @species,
         birth_date = @birth_date,
         cust_id = @cust_id
@@ -137,8 +136,7 @@ CREATE PROCEDURE sp_UpdateMedicalRecord
 AS
 BEGIN
     UPDATE MEDICAL_RECORD
-    SET 
-        diagnosis = @diagnosis,
+    SET diagnosis = @diagnosis,
         prescription = @prescription,
         [date] = @date,
         pet_id = @pet_id
@@ -148,59 +146,64 @@ END
 GO
 CREATE PROCEDURE sp_UpdatePays
     @payment_id INT,
-    @pay_method VARCHAR(50),
-    @datetime DATETIME,
     @cust_id INT,
-    @staff_id INT
+    @staff_id INT,
+    @pay_method VARCHAR(50),
+    @datetime DATETIME
 AS
 BEGIN
     UPDATE PAYS
-    SET 
-        pay_method = @pay_method,
-        [datetime] = @datetime,
-        cust_id = @cust_id,
-        staff_id = @staff_id
-    WHERE payment_id = @payment_id;
+    SET pay_method = @pay_method,
+        [datetime] = @datetime
+    WHERE payment_id = @payment_id
+        AND cust_id = @cust_id
+        AND staff_id = @staff_id;
 END
 
 GO
 CREATE PROCEDURE sp_UpdateTransact
+    @transact_id INT,
     @cust_id INT,
     @staff_id INT,
-    @product_id INT
+    @product_id INT,
+    @schedule DATETIME,
+    @status BIT
 AS
 BEGIN
     UPDATE TRANSACT
-    SET 
-        cust_id = @cust_id,
-        staff_id = @staff_id,
-        product_id = @product_id
-    WHERE cust_id = @cust_id
-      AND staff_id = @staff_id
-      AND product_id = @product_id;
+    SET schedule = @schedule,
+        [status] = @status
+    WHERE transact_id = @transact_id
+        AND cust_id = @cust_id
+        AND staff_id = @staff_id
+        AND product_id = @product_id;
 END
 
 GO
 CREATE PROCEDURE sp_UpdateTreatment
     @treatment_id INT,
-    @schedule DATETIME,
     @drug_id INT,
     @pet_id INT,
-    @staff_id INT
+    @staff_id INT,
+    @schedule DATETIME,
+    @status BIT
 AS
 BEGIN
     UPDATE TREATMENT
-    SET 
-        schedule = @schedule,
-        drug_id = @drug_id,
-        pet_id = @pet_id,
-        staff_id = @staff_id
-    WHERE treatment_id = @treatment_id;
+    SET schedule = @schedule,
+        [status] = @status
+    WHERE treatment_id = @treatment_id
+        AND drug_id = @drug_id
+        AND pet_id = @pet_id
+        AND staff_id = @staff_id;
 END
 
 GO
-CREATE PROCEDURE sp_UpdateTreatmentServices
+CREATE PROCEDURE sp_UpdatePriceTreatmentServices
     @treatment_id INT,
+    @drug_id INT,
+    @pet_id INT,
+    @staff_id INT,
     @type VARCHAR(100),
     @price DECIMAL(10,2)
 AS
@@ -208,28 +211,34 @@ BEGIN
     UPDATE TREATMENT_SERVICES
     SET price = @price
     WHERE treatment_id = @treatment_id
-      AND [type] = @type;
+        AND drug_id = @drug_id
+        AND pet_id = @pet_id
+        AND staff_id = @staff_id
+        AND [type] = @type;
 END
 
 GO
 CREATE PROCEDURE sp_UpdateServes
     @serves_id INT,
-    @schedule DATETIME,
     @pet_id INT,
-    @staff_id INT
+    @staff_id INT,
+    @schedule DATETIME,
+    @status BIT
 AS
 BEGIN
     UPDATE SERVES
-    SET 
-        schedule = @schedule,
-        pet_id = @pet_id,
-        staff_id = @staff_id
-    WHERE serves_id = @serves_id;
+    SET schedule = @schedule,
+        [status] = @status
+    WHERE serves_id = @serves_id
+        AND pet_id = @pet_id
+        AND staff_id = @staff_id;
 END
 
 GO
-CREATE PROCEDURE sp_UpdateServesServices
+CREATE PROCEDURE sp_UpdatePriceServesServices
     @serves_id INT,
+    @pet_id INT,
+    @staff_id INT,
     @type VARCHAR(100),
     @price DECIMAL(10,2)
 AS
@@ -237,5 +246,7 @@ BEGIN
     UPDATE SERVES_SERVICES
     SET price = @price
     WHERE serves_id = @serves_id
-      AND [type] = @type;
+        AND pet_id = @pet_id
+        AND staff_id = @staff_id
+        AND [type] = @type;
 END

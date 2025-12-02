@@ -1,26 +1,27 @@
-USE PetShop
-GO
+USE PetShop;
 
+GO
 CREATE TRIGGER trg_ValidateAttendance
 ON STAFF_ATTENDANCE
-INSTEAD OF INSERT
+AFTER UPDATE
 AS
 BEGIN
-    IF EXISTS (SELECT 1 FROM inserted WHERE logout <= [login])
+    IF UPDATE(logout)
     BEGIN
-        RAISERROR('Data Absensi Tidak Valid: Logout tidak boleh lebih awal atau sama dengan Login.', 16, 1);
-        ROLLBACK TRANSACTION;
-        RETURN;
+        IF EXISTS (
+            SELECT 1
+            FROM inserted i
+            WHERE i.logout IS NOT NULL
+            AND i.logout <= i.[login]
+        )
+        BEGIN
+            RAISERROR('Invalid Attendance: Logout cannot be before or equal to Login time.', 16, 1);
+            ROLLBACK TRANSACTION
+        END
     END
-
-    INSERT INTO STAFF_ATTENDANCE ([login], logout, staff_id)
-    SELECT [login], logout, staff_id
-    FROM inserted;
-    
-    PRINT 'Data absensi berhasil divalidasi dan disimpan.';
 END;
-GO
 
+GO
 CREATE TRIGGER trg_ValidateTreatmentInsert
 ON TREATMENT
 INSTEAD OF INSERT
@@ -30,7 +31,7 @@ BEGIN
 
     IF EXISTS (SELECT 1 FROM inserted WHERE schedule < GETDATE())
     BEGIN
-        RAISERROR('Gagal Input: Tidak dapat membuat treatment di waktu yang sudah berlalu.', 16, 1);
+        RAISERROR('Input Failed: Cannot schedule a treatment in the past.', 16, 1);
         ROLLBACK TRANSACTION;
         RETURN;
     END
@@ -42,7 +43,7 @@ BEGIN
         WHERE t.schedule = i.schedule -- Asumsi durasi per slot waktu sama persis
     )
     BEGIN
-        RAISERROR('Gagal Input: Dokter Hewan ini sudah memiliki jadwal treatment di waktu tersebut.', 16, 1);
+        RAISERROR('Input Failed: Vet already has a treatment scheduled at that time.', 16, 1);
         ROLLBACK TRANSACTION;
         RETURN;
     END
@@ -50,11 +51,9 @@ BEGIN
     INSERT INTO TREATMENT (treatment_id, schedule, drug_id, pet_id, staff_id)
     SELECT treatment_id, schedule, drug_id, pet_id, staff_id
     FROM inserted;
-
-    PRINT 'Jadwal Treatment berhasil dibuat.';
 END;
-GO
 
+GO
 CREATE TRIGGER trg_ValidatePetBirthDate
 ON PET
 INSTEAD OF INSERT, UPDATE
@@ -64,7 +63,7 @@ BEGIN
 
     IF EXISTS (SELECT 1 FROM inserted WHERE birth_date > GETDATE())
     BEGIN
-        RAISERROR('Data Invalid: Tanggal lahir hewan tidak boleh di masa depan.', 16, 1);
+        RAISERROR('Invalid Data: Pet birth date cannot be in the future', 16, 1);
         ROLLBACK TRANSACTION;
         RETURN;
     END
@@ -89,8 +88,8 @@ BEGIN
         JOIN inserted i ON P.id = i.id;
     END
 END;
-GO
 
+GO
 CREATE TRIGGER trg_PreventNegativeStock
 ON [PRODUCT]
 INSTEAD OF UPDATE
@@ -100,7 +99,7 @@ BEGIN
 
     IF EXISTS (SELECT 1 FROM inserted WHERE stock < 0)
     BEGIN
-        RAISERROR('Update Ditolak: Stok produk tidak boleh kurang dari 0.', 16, 1);
+        RAISERROR('Update Denied: Product stock cannot be less than 0', 16, 1);
         ROLLBACK TRANSACTION;
         RETURN;
     END

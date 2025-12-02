@@ -1,4 +1,4 @@
-USE PetShop
+USE PetShop;
 
 GO
 CREATE PROCEDURE sp_InsertCustomer
@@ -79,13 +79,38 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE sp_InsertStaffAttendance
-    @login DATETIME,
-    @logout DATETIME,
+CREATE PROCEDURE sp_InsertStaffLogIn
     @staff_id INT
 AS
 BEGIN
-    INSERT INTO STAFF_ATTENDANCE ([login], logout, staff_id) VALUES (@login, @logout, @staff_id);
+    SET NOCOUNT ON;
+
+    IF EXISTS (SELECT 1 FROM STAFF_ATTENDANCE WHERE staff_id = @staff_id AND logout IS NULL)
+    BEGIN 
+        RAISERROR("Staff is already logged in!", 16, 1);
+        RETURN;
+    END
+
+    INSERT INTO STAFF_ATTENDANCE (staff_id, [login])
+    VALUES (@staff_id, GETDATE());
+END
+
+GO
+CREATE PROCEDURE sp_InsertStaffLogOut
+    @staff_id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS (SELECT 1 FROM STAFF_ATTENDANCE WHERE staff_id = @staff_id AND logout IS NULL)
+    BEGIN
+        RAISERROR('No active shift found for this staff member.', 16, 1);
+        RETURN;
+    END
+
+    UPDATE STAFF_ATTENDANCE
+    SET logout = GETDATE()
+    WHERE staff_id = @staff_id AND logout IS NULL;
 END
 
 GO
@@ -115,49 +140,27 @@ BEGIN
 END
 
 GO
-ALTER PROCEDURE sp_InsertTreatment
+CREATE PROCEDURE sp_InsertTreatment
     @treatment_id INT,
     @schedule DATETIME,
     @drug_id INT,
     @pet_id INT,
-    @vet_id INT
+    @vet_id INT,
+    @status BIT
 AS
 BEGIN
-
     IF NOT EXISTS(
         SELECT 1 
         FROM STAFF_ATTENDANCE 
         WHERE staff_id = @vet_id
-            AND CONVERT(date, login) = CONVERT(date, GETDATE())
+            AND CAST([login] AS DATE) = CAST(GETDATE() AS DATE)
             AND login <= GETDATE()
     )
     BEGIN
-        RAISERROR('Vet Has Not Logged In!', 16, 1);
+        RAISERROR('Vet has not logged in today!', 16, 1);
         RETURN;
     END;
 
-    BEGIN TRANSACTION;
-
-    BEGIN TRY
-        INSERT INTO TREATMENT (treatment_id, schedule, drug_id, pet_id, staff_id) 
-        VALUES (@treatment_id, @schedule, @drug_id, @pet_id, @vet_id);
-        COMMIT TRANSACTION;
-    END TRY
-
-    BEGIN CATCH
-        ROLLBACK TRANSACTION;
-    END CATCH
-END
-
-GO
-ALTER PROCEDURE sp_InsertTreatment
-    @treatment_id INT,
-    @schedule DATETIME,
-    @drug_id INT,
-    @pet_id INT,
-    @vet_id INT
-AS
-BEGIN
     INSERT INTO TREATMENT (treatment_id, schedule, drug_id, pet_id, staff_id) 
     VALUES (@treatment_id, @schedule, @drug_id, @pet_id, @vet_id);
 END
@@ -165,56 +168,38 @@ END
 GO
 CREATE PROCEDURE sp_InsertTreatmentService
     @treatment_id INT,
+    @drug_id INT,
+    @pet_id INT,
+    @staff_id INT,
     @type VARCHAR(100),
     @price DECIMAL(10, 2)
 AS
 BEGIN
-    INSERT INTO TREATMENT_SERVICES (treatment_id, [type], price) 
-    VALUES (@treatment_id, @type, @price);
+    INSERT INTO TREATMENT_SERVICES (treatment_id, drug_id, pet_id, staff_id, [type], price)
+    VALUES (@treatment_id, @drug_id, @pet_id, @staff_id, @type, @price);
 END
 
 GO
-ALTER PROCEDURE sp_InsertServes
+CREATE PROCEDURE sp_InsertServes
     @serves_id INT,
     @schedule DATETIME,
     @pet_id INT,
-    @staff_id INT
+    @staff_id INT,
+    @status BIT
 AS
 BEGIN
-
     IF NOT EXISTS(
         SELECT 1 
         FROM STAFF_ATTENDANCE 
         WHERE staff_id = @staff_id
-            AND CONVERT(date, login) = CONVERT(date, GETDATE())
+            AND CAST(login AS DATE) = CAST(GETDATE() AS DATE)
             AND login <= GETDATE()
     )
     BEGIN
-        RAISERROR('Staff Has Not Logged In!', 16, 1);
+        RAISERROR('Staff has not logged in today!', 16, 1);
         RETURN;
     END;
 
-    BEGIN TRANSACTION;
-
-    BEGIN TRY
-        INSERT INTO SERVES (serves_id, schedule, pet_id, staff_id) 
-        VALUES (@serves_id, @schedule, @pet_id, @staff_id);
-        COMMIT TRANSACTION;
-    END TRY
-
-    BEGIN CATCH
-        ROLLBACK TRANSACTION;
-    END CATCH
-END
-
-GO
-ALTER PROCEDURE sp_InsertServes
-    @serves_id INT,
-    @schedule DATETIME,
-    @pet_id INT,
-    @staff_id INT
-AS
-BEGIN
     INSERT INTO SERVES (serves_id, schedule, pet_id, staff_id) 
     VALUES (@serves_id, @schedule, @pet_id, @staff_id);
 END
@@ -222,13 +207,59 @@ END
 GO
 CREATE PROCEDURE sp_InsertServesService
     @serves_id INT,
+    @pet_id INT,
+    @staff_id INT,
     @type VARCHAR(100),
     @price DECIMAL(10, 2)
 AS
 BEGIN
-    INSERT INTO SERVES_SERVICES (serves_id, [type], price) 
-    VALUES (@serves_id, @type, @price);
+    INSERT INTO SERVES_SERVICES (serves_id, pet_id, staff_id, [type], price)
+    VALUES (@serves_id, @pet_id, @staff_id, @type, @price);
 END
+
+GO
+ALTER PROCEDURE sp_InsertTransact
+    @transact_id INT,
+    @cust_id INT,
+    @staff_id INT,
+    @product_id INT,
+    @schedule DATETIME,
+    @status BIT
+AS
+BEGIN
+    IF NOT EXISTS(
+        SELECT 1 
+        FROM STAFF_ATTENDANCE 
+        WHERE staff_id = @staff_id
+            AND CAST(login AS DATE) = CAST(GETDATE() AS DATE)
+            AND login <= GETDATE()
+    )
+    BEGIN
+        RAISERROR('Staff has not logged in today!', 16, 1);
+        RETURN;
+    END;
+    
+    IF (SELECT stock FROM [PRODUCT] WHERE id = @product_id) <= 0
+    BEGIN
+        RAISERROR('Insufficient stock!', 16, 1);
+        RETURN;
+    END;
+
+    BEGIN TRANSACTION;
+    BEGIN TRY
+        INSERT INTO TRANSACT (transact_id, cust_id, staff_id, product_id, schedule, [status])
+        VALUES (@transact_id, @cust_id, @staff_id, @product_id, @schedule, @status);
+
+        UPDATE [PRODUCT]
+        SET stock = stock - 1
+        WHERE id = @product_id;
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION;
+    END CATCH
+END;
 
 GO
 CREATE PROCEDURE sp_InsertPays
@@ -242,57 +273,3 @@ BEGIN
     INSERT INTO PAYS (payment_id, pay_method, [datetime], cust_id, staff_id) 
     VALUES (@payment_id, @pay_method, @datetime, @cust_id, @staff_id);
 END
-
-GO
-ALTER PROCEDURE sp_InsertTransact
-    @cust_id INT,
-    @staff_id INT,
-    @product_id INT
-AS
-BEGIN
-
-    IF NOT EXISTS(
-        SELECT 1 
-        FROM STAFF_ATTENDANCE 
-        WHERE staff_id = @staff_id
-            AND CONVERT(date, login) = CONVERT(date, GETDATE())
-            AND login <= GETDATE()
-    )
-    BEGIN
-        RAISERROR('Staff Has Not Logged In!', 16, 1);
-        RETURN;
-    END;
-    
-    IF (SELECT stock FROM [PRODUCT] WHERE id = @product_id) <= 0
-    BEGIN
-        RAISERROR('Insufficient Stock!', 16, 1);
-        RETURN;
-    END;
-
-    BEGIN TRANSACTION;
-
-    BEGIN TRY
-        INSERT INTO TRANSACT (cust_id, staff_id, product_id) 
-        VALUES (@cust_id, @staff_id, @product_id);
-
-        UPDATE [PRODUCT]
-        SET stock = stock - 1
-        WHERE id = @product_id;
-        COMMIT TRANSACTION;
-    END TRY
-
-    BEGIN CATCH
-        ROLLBACK TRANSACTION;
-    END CATCH
-END;
-
-GO
-ALTER PROCEDURE sp_InsertTransact
-    @cust_id INT,
-    @staff_id INT,
-    @product_id INT
-AS
-BEGIN
-    INSERT INTO TRANSACT (cust_id, staff_id, product_id) 
-    VALUES (@cust_id, @staff_id, @product_id);
-END;
