@@ -26,7 +26,7 @@ SELECT
     stock,
     price
 FROM [PRODUCT]
-WHERE stock < 10;
+WHERE stock < 5;
 
 -- View today's vet schedule
 GO

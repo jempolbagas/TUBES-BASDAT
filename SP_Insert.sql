@@ -113,7 +113,7 @@ BEGIN
 
     IF EXISTS (SELECT 1 FROM STAFF_ATTENDANCE WHERE staff_id = @staff_id AND logout IS NULL)
     BEGIN 
-        RAISERROR("Staff is already logged in!", 16, 1);
+        RAISERROR('Staff is already logged in!', 16, 1);
         RETURN;
     END
 
@@ -168,10 +168,10 @@ END
 GO
 CREATE PROCEDURE sp_InsertTreatment
     @treatment_id INT,
-    @schedule DATETIME,
     @drug_id INT,
     @pet_id INT,
     @vet_id INT,
+    @schedule DATETIME,
     @status BIT
 AS
 BEGIN
@@ -187,8 +187,8 @@ BEGIN
         RETURN;
     END;
 
-    INSERT INTO TREATMENT (treatment_id, schedule, drug_id, pet_id, staff_id) 
-    VALUES (@treatment_id, @schedule, @drug_id, @pet_id, @vet_id);
+    INSERT INTO TREATMENT (treatment_id, drug_id, pet_id, staff_id, schedule, [status]) 
+    VALUES (@treatment_id, @drug_id, @pet_id, @vet_id, @schedule, @status);
 END
 
 GO
@@ -208,9 +208,9 @@ END
 GO
 CREATE PROCEDURE sp_InsertServes
     @serves_id INT,
-    @schedule DATETIME,
     @pet_id INT,
     @staff_id INT,
+    @schedule DATETIME,
     @status BIT
 AS
 BEGIN
@@ -226,8 +226,8 @@ BEGIN
         RETURN;
     END;
 
-    INSERT INTO SERVES (serves_id, schedule, pet_id, staff_id) 
-    VALUES (@serves_id, @schedule, @pet_id, @staff_id);
+    INSERT INTO SERVES (serves_id, pet_id, staff_id, schedule, [status]) 
+    VALUES (@serves_id, @pet_id, @staff_id, @schedule, @status);
 END
 
 GO
@@ -244,7 +244,7 @@ BEGIN
 END
 
 GO
-ALTER PROCEDURE sp_InsertTransact
+CREATE PROCEDURE sp_InsertTransact
     @transact_id INT,
     @cust_id INT,
     @staff_id INT,
