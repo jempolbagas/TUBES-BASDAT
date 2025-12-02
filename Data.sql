@@ -466,50 +466,60 @@ EXEC sp_InsertCashier 23, 'Suleman Hakim', 'Jl. Duku No. 5', 'TRAIN023';
 EXEC sp_InsertCashier 24, 'Taufik Rahman', 'Jl. Pepaya No. 10', 'TRAIN024';
 EXEC sp_InsertCashier 25, 'Ussy Andini', 'Jl. Nanas No. 3', 'TRAIN025';
 
--- Staff Attendance
-EXEC sp_InsertStaffAttendance '2025-11-22 08:00', '2025-11-22 16:00', 1;
-EXEC sp_InsertStaffAttendance '2025-11-22 08:01', '2025-11-22 16:01',11;
-EXEC sp_InsertStaffAttendance '2025-11-22 08:02', '2025-11-22 16:02', 21;
+-- Staff Login
+EXEC sp_InsertStaffLogIn 1;
+EXEC sp_InsertStaffLogIn 2;
+EXEC sp_InsertStaffLogIn 3;
+EXEC sp_InsertStaffLogIn 4;
+EXEC sp_InsertStaffLogIn 5;
+EXEC sp_InsertStaffLogIn 6;
+EXEC sp_InsertStaffLogIn 7;
+EXEC sp_InsertStaffLogIn 8;
+EXEC sp_InsertStaffLogIn 9;
+EXEC sp_InsertStaffLogIn 10;
+EXEC sp_InsertStaffLogIn 11;
+EXEC sp_InsertStaffLogIn 12;
+EXEC sp_InsertStaffLogIn 13;
+EXEC sp_InsertStaffLogIn 14;
+EXEC sp_InsertStaffLogIn 15;
+EXEC sp_InsertStaffLogIn 16;
+EXEC sp_InsertStaffLogIn 17;
+EXEC sp_InsertStaffLogIn 18;
+EXEC sp_InsertStaffLogIn 19;
+EXEC sp_InsertStaffLogIn 20;
+EXEC sp_InsertStaffLogIn 21;
+EXEC sp_InsertStaffLogIn 22;
+EXEC sp_InsertStaffLogIn 23;
+EXEC sp_InsertStaffLogIn 24;
+EXEC sp_InsertStaffLogIn 25;
 
-EXEC sp_InsertStaffAttendance '2025-11-23 08:00', '2025-11-23 16:00', 2;
-EXEC sp_InsertStaffAttendance '2025-11-23 08:01', '2025-11-23 16:01',12;
-EXEC sp_InsertStaffAttendance '2025-11-23 08:02', '2025-11-23 16:02', 22;
+-- Staff Logout
+EXEC sp_InsertStaffLogOut 1;
+EXEC sp_InsertStaffLogOut 2;
+EXEC sp_InsertStaffLogOut 3;
+EXEC sp_InsertStaffLogOut 4;
+EXEC sp_InsertStaffLogOut 5;
+EXEC sp_InsertStaffLogOut 6;
+EXEC sp_InsertStaffLogOut 7;
+EXEC sp_InsertStaffLogOut 8;
+EXEC sp_InsertStaffLogOut 9;
+EXEC sp_InsertStaffLogOut 10;
+EXEC sp_InsertStaffLogOut 11;
+EXEC sp_InsertStaffLogOut 12;
+EXEC sp_InsertStaffLogOut 13;
+EXEC sp_InsertStaffLogOut 14;
+EXEC sp_InsertStaffLogOut 15;
+EXEC sp_InsertStaffLogOut 16;
+EXEC sp_InsertStaffLogOut 17;
+EXEC sp_InsertStaffLogOut 18;
+EXEC sp_InsertStaffLogOut 19;
+EXEC sp_InsertStaffLogOut 20;
+EXEC sp_InsertStaffLogOut 21;
+EXEC sp_InsertStaffLogOut 22;
+EXEC sp_InsertStaffLogOut 23;
+EXEC sp_InsertStaffLogOut 24;
+EXEC sp_InsertStaffLogOut 25;
 
-EXEC sp_InsertStaffAttendance '2025-11-24 08:00', '2025-11-24 16:00', 3;
-EXEC sp_InsertStaffAttendance '2025-11-24 08:01', '2025-11-24 16:01',13;
-EXEC sp_InsertStaffAttendance '2025-11-24 08:02', '2025-11-24 16:02', 23;
-
-EXEC sp_InsertStaffAttendance '2025-11-25 08:00', '2025-11-25 16:00', 4;
-EXEC sp_InsertStaffAttendance '2025-11-25 08:01', '2025-11-25 16:01',14;
-EXEC sp_InsertStaffAttendance '2025-11-25 08:02', '2025-11-25 16:02', 24;
-
-EXEC sp_InsertStaffAttendance '2025-11-26 08:00', '2025-11-26 16:00', 5;
-EXEC sp_InsertStaffAttendance '2025-11-26 08:01', '2025-11-26 16:01',15;
-EXEC sp_InsertStaffAttendance '2025-11-26 08:02', '2025-11-26 16:02', 25;
-
-EXEC sp_InsertStaffAttendance '2025-11-27 08:00', '2025-11-27 16:00', 6;
-EXEC sp_InsertStaffAttendance '2025-11-27 08:01', '2025-11-27 16:01',16;
-EXEC sp_InsertStaffAttendance '2025-11-27 08:02', '2025-11-27 16:02', 21;
-
-EXEC sp_InsertStaffAttendance '2025-11-28 08:00', '2025-11-28 16:00', 7;
-EXEC sp_InsertStaffAttendance '2025-11-28 08:01', '2025-11-28 16:01',17;
-EXEC sp_InsertStaffAttendance '2025-11-28 08:02', '2025-11-28 16:02', 22;
-
-EXEC sp_InsertStaffAttendance '2025-11-29 08:00', '2025-11-29 16:00', 8;
-EXEC sp_InsertStaffAttendance '2025-11-29 08:01', '2025-11-29 16:01',18;
-EXEC sp_InsertStaffAttendance '2025-11-29 08:02', '2025-11-29 16:02', 23;
-
-EXEC sp_InsertStaffAttendance '2025-11-30 08:00', '2025-11-30 16:00', 9;
-EXEC sp_InsertStaffAttendance '2025-11-30 08:01', '2025-11-30 16:01',19;
-EXEC sp_InsertStaffAttendance '2025-11-30 08:02', '2025-11-30 16:02', 24;
-
-EXEC sp_InsertStaffAttendance '2025-12-01 08:00', '2025-12-01 16:00', 10;
-EXEC sp_InsertStaffAttendance '2025-12-01 08:01', '2025-12-01 16:01',20;
-EXEC sp_InsertStaffAttendance '2025-12-01 08:02', '2025-12-01 16:02', 25;
-
-EXEC sp_InsertStaffAttendance '2025-12-02 08:00', '2025-12-02 16:00', 1;
-EXEC sp_InsertStaffAttendance '2025-12-02 08:01', '2025-12-02 16:01',11;
-EXEC sp_InsertStaffAttendance '2025-12-02 08:02', '2025-12-02 16:02', 21;
 
 -- PET
 EXEC sp_InsertPet @id = 1, @name = 'Charlie', @species = 'Dog', @birth_date = '2021-01-15', @cust_id = 1;
@@ -755,734 +765,704 @@ EXEC sp_InsertMedicalRecord 109, 'Parasite Infection', 'Anti-parasitic', '2025-1
 EXEC sp_InsertMedicalRecord 110, 'Fever', 'Antipyretic Injection', '2025-12-01', 10;
 
 -- Treatment
-EXEC sp_InsertTreatment 1,  '2025-11-22', 1, 37, 1, 1;
-EXEC sp_InsertTreatment 2,  '2025-11-22', 1, 84, 2, 1;
-EXEC sp_InsertTreatment 3,  '2025-11-22', 1, 12, 3, 1;
-EXEC sp_InsertTreatment 4,  '2025-11-22', 1, 65, 4, 1;
-EXEC sp_InsertTreatment 5,  '2025-11-22', 1, 28, 5, 1;
-EXEC sp_InsertTreatment 6,  '2025-11-22', 1, 91, 6, 1;
-EXEC sp_InsertTreatment 7,  '2025-11-22', 1, 54, 7, 1;
-EXEC sp_InsertTreatment 8,  '2025-11-22', 1, 7,  8, 1;
-EXEC sp_InsertTreatment 9,  '2025-11-22', 1, 33, 9, 1;
-EXEC sp_InsertTreatment 10, '2025-11-22', 1, 76, 10, 1;
+INSERT INTO TREATMENT (treatment_id, drug_id, pet_id, staff_id, schedule, [status]) VALUES
+(1, 37, 1, 1, '2025-11-22', 1),
+(2, 84, 2, 1, '2025-11-22', 1),
+(3, 12, 3, 1, '2025-11-22', 1),
+(4, 65, 4, 1, '2025-11-22', 1),
+(5, 28, 5, 1, '2025-11-22', 1),
+(6, 91, 6, 1, '2025-11-22', 1),
+(7, 54, 7, 1, '2025-11-22', 1),
+(8, 7,  8, 1, '2025-11-22', 1),
+(9, 33, 9, 1, '2025-11-22', 1),
+(10,76,10, 1, '2025-11-22', 1),
 
-EXEC sp_InsertTreatment 11, '2025-11-23', 1, 19, 11, 2;
-EXEC sp_InsertTreatment 12, '2025-11-23', 1, 88, 12, 2;
-EXEC sp_InsertTreatment 13, '2025-11-23', 1, 46, 13, 2;
-EXEC sp_InsertTreatment 14, '2025-11-23', 1, 3,  14, 2;
-EXEC sp_InsertTreatment 15, '2025-11-23', 1, 72, 15, 2;
-EXEC sp_InsertTreatment 16, '2025-11-23', 1, 59, 16, 2;
-EXEC sp_InsertTreatment 17, '2025-11-23', 1, 6,  17, 2;
-EXEC sp_InsertTreatment 18, '2025-11-23', 1, 41, 18, 2;
-EXEC sp_InsertTreatment 19, '2025-11-23', 1, 97, 19, 2;
-EXEC sp_InsertTreatment 20, '2025-11-23', 1, 23, 20, 2;
+(11,19,11, 2, '2025-11-23', 1),
+(12,88,12, 2, '2025-11-23', 1),
+(13,46,13, 2, '2025-11-23', 1),
+(14, 3,14, 2, '2025-11-23', 1),
+(15,72,15, 2, '2025-11-23', 1),
+(16,59,16, 2, '2025-11-23', 1),
+(17, 6,17, 2, '2025-11-23', 1),
+(18,41,18, 2, '2025-11-23', 1),
+(19,97,19, 2, '2025-11-23', 1),
+(20,23,20, 2, '2025-11-23', 1),
 
-EXEC sp_InsertTreatment 21, '2025-11-24', 1, 50, 21, 3;
-EXEC sp_InsertTreatment 22, '2025-11-24', 1, 12, 22, 3;
-EXEC sp_InsertTreatment 23, '2025-11-24', 1, 81, 23, 3;
-EXEC sp_InsertTreatment 24, '2025-11-24', 1, 29, 24, 3;
-EXEC sp_InsertTreatment 25, '2025-11-24', 1, 74, 25, 3;
-EXEC sp_InsertTreatment 26, '2025-11-24', 1, 37, 26, 3;
-EXEC sp_InsertTreatment 27, '2025-11-24', 1, 90, 27, 3;
-EXEC sp_InsertTreatment 28, '2025-11-24', 1, 15, 28, 3;
-EXEC sp_InsertTreatment 29, '2025-11-24', 1, 68, 29, 3;
-EXEC sp_InsertTreatment 30, '2025-11-24', 1, 5,  30, 3;
+(21,50,21, 3, '2025-11-24', 1),
+(22,12,22, 3, '2025-11-24', 1),
+(23,81,23, 3, '2025-11-24', 1),
+(24,29,24, 3, '2025-11-24', 1),
+(25,74,25, 3, '2025-11-24', 1),
+(26,37,26, 3, '2025-11-24', 1),
+(27,90,27, 3, '2025-11-24', 1),
+(28,15,28, 3, '2025-11-24', 1),
+(29,68,29, 3, '2025-11-24', 1),
+(30, 5,30, 3, '2025-11-24', 1),
 
-EXEC sp_InsertTreatment 31, '2025-11-25', 1, 33, 31, 4;
-EXEC sp_InsertTreatment 32, '2025-11-25', 1, 80, 32, 4;
-EXEC sp_InsertTreatment 33, '2025-11-25', 1, 21, 33, 4;
-EXEC sp_InsertTreatment 34, '2025-11-25', 1, 56, 34, 4;
-EXEC sp_InsertTreatment 35, '2025-11-25', 1, 99, 35, 4;
-EXEC sp_InsertTreatment 36, '2025-11-25', 1, 8,  36, 4;
-EXEC sp_InsertTreatment 37, '2025-11-25', 1, 44, 37, 4;
-EXEC sp_InsertTreatment 38, '2025-11-25', 1, 61, 38, 4;
-EXEC sp_InsertTreatment 39, '2025-11-25', 1, 13, 39, 4;
-EXEC sp_InsertTreatment 40, '2025-11-25', 1, 78, 40, 4;
+(31,33,31, 4, '2025-11-25', 1),
+(32,80,32, 4, '2025-11-25', 1),
+(33,21,33, 4, '2025-11-25', 1),
+(34,56,34, 4, '2025-11-25', 1),
+(35,99,35, 4, '2025-11-25', 1),
+(36, 8,36, 4, '2025-11-25', 1),
+(37,44,37, 4, '2025-11-25', 1),
+(38,61,38, 4, '2025-11-25', 1),
+(39,13,39, 4, '2025-11-25', 1),
+(40,78,40, 4, '2025-11-25', 1),
 
-EXEC sp_InsertTreatment 41, '2025-11-26', 1, 27, 41, 5;
-EXEC sp_InsertTreatment 42, '2025-11-26', 1, 92, 42, 5;
-EXEC sp_InsertTreatment 43, '2025-11-26', 1, 35, 43, 5;
-EXEC sp_InsertTreatment 44, '2025-11-26', 1, 64, 44, 5;
-EXEC sp_InsertTreatment 45, '2025-11-26', 1, 7,  45, 5;
-EXEC sp_InsertTreatment 46, '2025-11-26', 1, 53, 46, 5;
-EXEC sp_InsertTreatment 47, '2025-11-26', 1, 86, 47, 5;
-EXEC sp_InsertTreatment 48, '2025-11-26', 1, 16, 48, 5;
-EXEC sp_InsertTreatment 49, '2025-11-26', 1, 72, 49, 5;
-EXEC sp_InsertTreatment 50, '2025-11-26', 1, 38, 50, 5;
+(41,27,41, 5, '2025-11-26', 1),
+(42,92,42, 5, '2025-11-26', 1),
+(43,35,43, 5, '2025-11-26', 1),
+(44,64,44, 5, '2025-11-26', 1),
+(45, 7,45, 5, '2025-11-26', 1),
+(46,53,46, 5, '2025-11-26', 1),
+(47,86,47, 5, '2025-11-26', 1),
+(48,16,48, 5, '2025-11-26', 1),
+(49,72,49, 5, '2025-11-26', 1),
+(50,38,50, 5, '2025-11-26', 1),
 
-EXEC sp_InsertTreatment 51, '2025-11-27', 1, 49, 51, 6;
-EXEC sp_InsertTreatment 52, '2025-11-27', 1, 5,  52, 6;
-EXEC sp_InsertTreatment 53, '2025-11-27', 1, 90, 53, 6;
-EXEC sp_InsertTreatment 54, '2025-11-27', 1, 33, 54, 6;
-EXEC sp_InsertTreatment 55, '2025-11-27', 1, 18, 55, 6;
-EXEC sp_InsertTreatment 56, '2025-11-27', 1, 75, 56, 6;
-EXEC sp_InsertTreatment 57, '2025-11-27', 1, 61, 57, 6;
-EXEC sp_InsertTreatment 58, '2025-11-27', 1, 12, 58, 6;
-EXEC sp_InsertTreatment 59, '2025-11-27', 1, 87, 59, 6;
-EXEC sp_InsertTreatment 60, '2025-11-27', 1, 40, 60, 6;
+(51,49,51, 6, '2025-11-27', 1),
+(52, 5,52, 6, '2025-11-27', 1),
+(53,90,53, 6, '2025-11-27', 1),
+(54,33,54, 6, '2025-11-27', 1),
+(55,18,55, 6, '2025-11-27', 1),
+(56,75,56, 6, '2025-11-27', 1),
+(57,61,57, 6, '2025-11-27', 1),
+(58,12,58, 6, '2025-11-27', 1),
+(59,87,59, 6, '2025-11-27', 1),
+(60,40,60, 6, '2025-11-27', 1),
 
-EXEC sp_InsertTreatment 61, '2025-11-28', 1, 14, 61, 7;
-EXEC sp_InsertTreatment 62, '2025-11-28', 1, 87, 62, 7;
-EXEC sp_InsertTreatment 63, '2025-11-28', 1, 45, 63, 7;
-EXEC sp_InsertTreatment 64, '2025-11-28', 1, 32, 64, 7;
-EXEC sp_InsertTreatment 65, '2025-11-28', 1, 68, 65, 7;
-EXEC sp_InsertTreatment 66, '2025-11-28', 1, 5,  66, 7;
-EXEC sp_InsertTreatment 67, '2025-11-28', 1, 76, 67, 7;
-EXEC sp_InsertTreatment 68, '2025-11-28', 1, 22, 68, 7;
-EXEC sp_InsertTreatment 69, '2025-11-28', 1, 93, 69, 7;
-EXEC sp_InsertTreatment 70, '2025-11-28', 1, 38, 70, 7;
+(61,14,61, 7, '2025-11-28', 1),
+(62,87,62, 7, '2025-11-28', 1),
+(63,45,63, 7, '2025-11-28', 1),
+(64,32,64, 7, '2025-11-28', 1),
+(65,68,65, 7, '2025-11-28', 1),
+(66, 5,66, 7, '2025-11-28', 1),
+(67,76,67, 7, '2025-11-28', 1),
+(68,22,68, 7, '2025-11-28', 1),
+(69,93,69, 7, '2025-11-28', 1),
+(70,38,70, 7, '2025-11-28', 1),
+
+(71,51,71, 8, '2025-11-29', 1),
+(72,19,72, 8, '2025-11-29', 1),
+(73,84,73, 8, '2025-11-29', 1),
+(74, 6,74, 8, '2025-11-29', 1),
+(75,77,75, 8, '2025-11-29', 1),
+(76,43,76, 8, '2025-11-29', 1),
+(77,28,77, 8, '2025-11-29', 1),
+(78,95,78, 8, '2025-11-29', 1),
+(79,12,79, 8, '2025-11-29', 1),
+(80,63,80, 8, '2025-11-29', 1),
+
+(81,41,81, 9, '2025-11-30', 1),
+(82,67,82, 9, '2025-11-30', 1),
+(83, 9,83, 9, '2025-11-30', 1),
+(84,74,84, 9, '2025-11-30', 1),
+(85,29,85, 9, '2025-11-30', 1),
+(86,82,86, 9, '2025-11-30', 1),
+(87,57,87, 9, '2025-11-30', 1),
+(88,20,88, 9, '2025-11-30', 1),
+(89,95,89, 9, '2025-11-30', 1),
+(90,36,90, 9, '2025-11-30', 1),
+
+(91,13,91,10, '2025-12-01', 1),
+(92,88,92,10, '2025-12-01', 1),
+(93,60,93,10, '2025-12-01', 1),
+(94,44,94,10, '2025-12-01', 1),
+(95,73,95,10, '2025-12-01', 1),
+(96,25,96,10, '2025-12-01', 1),
+(97,97,97,10, '2025-12-01', 1),
+(98,31,98,10, '2025-12-01', 1),
+(99,54,99,10, '2025-12-01', 1),
+(100,18,100,10,'2025-12-01', 1),
+
+(101,85, 1, 1, '2025-12-02', 0),
+(102,47, 2, 1, '2025-12-02', 1),
+(103,29, 3, 1, '2025-12-02', 0),
+(104,91, 4, 1, '2025-12-02', 0),
+(105, 7, 5, 1, '2025-12-02', 1),
+(106,62, 6, 1, '2025-12-02', 1),
+(107,36, 7, 1, '2025-12-02', 1),
+(108,55, 8, 1, '2025-12-02', 0),
+(109,13, 9, 1, '2025-12-02', 1),
+(110,98,10, 1, '2025-12-02', 0);
 
 
-EXEC sp_InsertTreatment 71, '2025-11-29', 1, 51, 71, 8;
-EXEC sp_InsertTreatment 72, '2025-11-29', 1, 19, 72, 8;
-EXEC sp_InsertTreatment 73, '2025-11-29', 1, 84, 73, 8;
-EXEC sp_InsertTreatment 74, '2025-11-29', 1, 6,  74, 8;
-EXEC sp_InsertTreatment 75, '2025-11-29', 1, 77, 75, 8;
-EXEC sp_InsertTreatment 76, '2025-11-29', 1, 43, 76, 8;
-EXEC sp_InsertTreatment 77, '2025-11-29', 1, 28, 77, 8;
-EXEC sp_InsertTreatment 78, '2025-11-29', 1, 95, 78, 8;
-EXEC sp_InsertTreatment 79, '2025-11-29', 1, 12, 79, 8;
-EXEC sp_InsertTreatment 80, '2025-11-29', 1, 63, 80, 8;
-
-EXEC sp_InsertTreatment 81, '2025-11-30', 1, 41, 81, 9;
-EXEC sp_InsertTreatment 82, '2025-11-30', 1, 67, 82, 9;
-EXEC sp_InsertTreatment 83, '2025-11-30', 1, 9,  83, 9;
-EXEC sp_InsertTreatment 84, '2025-11-30', 1, 74, 84, 9;
-EXEC sp_InsertTreatment 85, '2025-11-30', 1, 29, 85, 9;
-EXEC sp_InsertTreatment 86, '2025-11-30', 1, 82, 86, 9;
-EXEC sp_InsertTreatment 87, '2025-11-30', 1, 57, 87, 9;
-EXEC sp_InsertTreatment 88, '2025-11-30', 1, 20, 88, 9;
-EXEC sp_InsertTreatment 89, '2025-11-30', 1, 95, 89, 9;
-EXEC sp_InsertTreatment 90, '2025-11-30', 1, 36, 90, 9;
-
-EXEC sp_InsertTreatment 91, '2025-12-01', 1, 13, 91, 10;
-EXEC sp_InsertTreatment 92, '2025-12-01', 1, 88, 92, 10;
-EXEC sp_InsertTreatment 93, '2025-12-01', 1, 60, 93, 10;
-EXEC sp_InsertTreatment 94, '2025-12-01', 1, 44, 94, 10;
-EXEC sp_InsertTreatment 95, '2025-12-01', 1, 73, 95, 10;
-EXEC sp_InsertTreatment 96, '2025-12-01', 1, 25, 96, 10;
-EXEC sp_InsertTreatment 97, '2025-12-01', 1, 97, 97, 10;
-EXEC sp_InsertTreatment 98, '2025-12-01', 1, 31, 98, 10;
-EXEC sp_InsertTreatment 99, '2025-12-01', 1, 54, 99, 10;
-EXEC sp_InsertTreatment 100,'2025-12-01', 1, 18,100, 10;
-
-EXEC sp_InsertTreatment 101, '2025-12-02', 0, 85, 1, 1;
-EXEC sp_InsertTreatment 102, '2025-12-02', 1, 47, 2, 1;
-EXEC sp_InsertTreatment 103, '2025-12-02', 0, 29, 3, 1;
-EXEC sp_InsertTreatment 104, '2025-12-02', 0, 91, 4, 1;
-EXEC sp_InsertTreatment 105, '2025-12-02', 1, 7,  5, 1;
-EXEC sp_InsertTreatment 106, '2025-12-02', 1, 62, 6, 1;
-EXEC sp_InsertTreatment 107, '2025-12-02', 1, 36, 7, 1;
-EXEC sp_InsertTreatment 108, '2025-12-02', 0, 55, 8, 1;
-EXEC sp_InsertTreatment 109, '2025-12-02', 1, 13, 9, 1;
-EXEC sp_InsertTreatment 110, '2025-12-02', 0, 98,10, 1;
 
 -- Treatment Service
-EXEC sp_InsertTreatmentService 1,  'General Checkup',           150000;
-EXEC sp_InsertTreatmentService 2,  'Vaccination',               125000;
-EXEC sp_InsertTreatmentService 3,  'Deworming',                 110000;
-EXEC sp_InsertTreatmentService 4,  'Dental Cleaning',           225000;
-EXEC sp_InsertTreatmentService 5,  'General Checkup',           140000
-EXEC sp_InsertTreatmentService 6,  'Vaccination',               130000;
-EXEC sp_InsertTreatmentService 7,  'X-Ray',                     260000;
-EXEC sp_InsertTreatmentService 8,  'Blood Test',                200000;
-EXEC sp_InsertTreatmentService 9,  'Ear Cleaning',              95000;
-EXEC sp_InsertTreatmentService 10, 'General Checkup',           145000;
+INSERT INTO TREATMENT_SERVICES (treatment_id, drug_id, pet_id, staff_id, [type], price) VALUES
+(1, 37, 1, 1, 'Checkup', 150.00),
+(2, 84, 2, 1, 'Vaccination', 200.00),
+(3, 12, 3, 1, 'Medication', 100.00),
+(4, 65, 4, 1, 'Grooming', 120.00),
+(5, 28, 5, 1, 'Checkup', 150.00),
+(6, 91, 6, 1, 'Surgery', 500.00),
+(7, 54, 7, 1, 'Medication', 100.00),
+(8, 7, 8, 1, 'Vaccination', 200.00),
+(9, 33, 9, 1, 'Grooming', 120.00),
+(10, 76, 10, 1, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 11, 'Deworming',                 115000;
-EXEC sp_InsertTreatmentService 12, 'Vaccination',               125000;
-EXEC sp_InsertTreatmentService 13, 'Physical Examination',      170000;
-EXEC sp_InsertTreatmentService 14, 'Blood Test',                195000;
-EXEC sp_InsertTreatmentService 15, 'Dental Cleaning',           230000;
-EXEC sp_InsertTreatmentService 16, 'General Checkup',           150000;
-EXEC sp_InsertTreatmentService 17, 'Vaccination',               130000;
-EXEC sp_InsertTreatmentService 18, 'Ear Cleaning',              90000;
-EXEC sp_InsertTreatmentService 19, 'Deworming',                 105000;
-EXEC sp_InsertTreatmentService 20, 'Physical Examination',      165000;
+(11, 19, 11, 2, 'Surgery', 450.00),
+(12, 88, 12, 2, 'Medication', 100.00),
+(13, 46, 13, 2, 'Checkup', 150.00),
+(14, 3, 14, 2, 'Grooming', 120.00),
+(15, 72, 15, 2, 'Vaccination', 200.00),
+(16, 59, 16, 2, 'Medication', 100.00),
+(17, 6, 17, 2, 'Checkup', 150.00),
+(18, 41, 18, 2, 'Surgery', 400.00),
+(19, 97, 19, 2, 'Grooming', 120.00),
+(20, 23, 20, 2, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 21, 'Blood Test',                205000;
-EXEC sp_InsertTreatmentService 22, 'General Checkup',           150000;
-EXEC sp_InsertTreatmentService 23, 'Vaccination',               130000;
-EXEC sp_InsertTreatmentService 24, 'X-Ray',                     255000;
-EXEC sp_InsertTreatmentService 25, 'Physical Examination',      180000;
-EXEC sp_InsertTreatmentService 26, 'Dental Cleaning',           235000;
-EXEC sp_InsertTreatmentService 27, 'Deworming',                 105000;
-EXEC sp_InsertTreatmentService 28, 'General Checkup',           145000;
-EXEC sp_InsertTreatmentService 29, 'Vaccination',               125000;
-EXEC sp_InsertTreatmentService 30, 'Ear Cleaning',              85000;
+(21, 50, 21, 3, 'Medication', 100.00),
+(22, 12, 22, 3, 'Vaccination', 200.00),
+(23, 81, 23, 3, 'Surgery', 500.00),
+(24, 29, 24, 3, 'Checkup', 150.00),
+(25, 74, 25, 3, 'Grooming', 120.00),
+(26, 37, 26, 3, 'Medication', 100.00),
+(27, 90, 27, 3, 'Checkup', 150.00),
+(28, 15, 28, 3, 'Vaccination', 200.00),
+(29, 68, 29, 3, 'Grooming', 120.00),
+(30, 5, 30, 3, 'Surgery', 450.00),
 
-EXEC sp_InsertTreatmentService 31, 'General Checkup',           150000;
-EXEC sp_InsertTreatmentService 32, 'X-Ray',                     270000;
-EXEC sp_InsertTreatmentService 33, 'Blood Test',                210000;
-EXEC sp_InsertTreatmentService 34, 'Physical Examination',      175000;
-EXEC sp_InsertTreatmentService 35, 'Deworming',                 120000;
-EXEC sp_InsertTreatmentService 36, 'Vaccination',               135000;
-EXEC sp_InsertTreatmentService 37, 'General Checkup',           155000;
-EXEC sp_InsertTreatmentService 38, 'Ear Cleaning',              95000;
-EXEC sp_InsertTreatmentService 39, 'Dental Cleaning',           240000;
-EXEC sp_InsertTreatmentService 40, 'Blood Test',                210000;
+(31, 33, 31, 4, 'Checkup', 150.00),
+(32, 80, 32, 4, 'Medication', 100.00),
+(33, 21, 33, 4, 'Vaccination', 200.00),
+(34, 56, 34, 4, 'Grooming', 120.00),
+(35, 99, 35, 4, 'Surgery', 500.00),
+(36, 8, 36, 4, 'Checkup', 150.00),
+(37, 44, 37, 4, 'Medication', 100.00),
+(38, 61, 38, 4, 'Vaccination', 200.00),
+(39, 13, 39, 4, 'Grooming', 120.00),
+(40, 78, 40, 4, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 41, 'Deworming',                 100000;
-EXEC sp_InsertTreatmentService 42, 'General Checkup',           145000;
-EXEC sp_InsertTreatmentService 43, 'Vaccination',               120000;
-EXEC sp_InsertTreatmentService 44, 'Physical Examination',      180000;
-EXEC sp_InsertTreatmentService 45, 'X-Ray',                     265000;
-EXEC sp_InsertTreatmentService 46, 'General Checkup',           160000;
-EXEC sp_InsertTreatmentService 47, 'Ear Cleaning',              90000;
-EXEC sp_InsertTreatmentService 48, 'Vaccination',               125000;
-EXEC sp_InsertTreatmentService 49, 'Blood Test',                200000;
-EXEC sp_InsertTreatmentService 50, 'Physical Examination',      175000;
+(41, 27, 41, 5, 'Surgery', 400.00),
+(42, 92, 42, 5, 'Medication', 100.00),
+(43, 35, 43, 5, 'Checkup', 150.00),
+(44, 64, 44, 5, 'Grooming', 120.00),
+(45, 7, 45, 5, 'Vaccination', 200.00),
+(46, 53, 46, 5, 'Medication', 100.00),
+(47, 86, 47, 5, 'Checkup', 150.00),
+(48, 16, 48, 5, 'Surgery', 450.00),
+(49, 72, 49, 5, 'Grooming', 120.00),
+(50, 38, 50, 5, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 51, 'Dental Cleaning',           245000;
-EXEC sp_InsertTreatmentService 52, 'General Checkup',           155000;
-EXEC sp_InsertTreatmentService 53, 'Vaccination',               130000;
-EXEC sp_InsertTreatmentService 54, 'Blood Test',                215000;
-EXEC sp_InsertTreatmentService 55, 'Physical Examination',      185000;
-EXEC sp_InsertTreatmentService 56, 'Ear Cleaning',              95000;
-EXEC sp_InsertTreatmentService 57, 'Deworming',                 110000;
-EXEC sp_InsertTreatmentService 58, 'General Checkup',           160000;
-EXEC sp_InsertTreatmentService 59, 'X-Ray',                     275000;
-EXEC sp_InsertTreatmentService 60, 'Blood Test',                205000;
+(51, 49, 51, 6, 'Medication', 100.00),
+(52, 5, 52, 6, 'Vaccination', 200.00),
+(53, 90, 53, 6, 'Surgery', 500.00),
+(54, 33, 54, 6, 'Checkup', 150.00),
+(55, 18, 55, 6, 'Grooming', 120.00),
+(56, 75, 56, 6, 'Medication', 100.00),
+(57, 61, 57, 6, 'Checkup', 150.00),
+(58, 12, 58, 6, 'Vaccination', 200.00),
+(59, 87, 59, 6, 'Grooming', 120.00),
+(60, 40, 60, 6, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 61, 'Vaccination',               135000;
-EXEC sp_InsertTreatmentService 62, 'General Checkup',           150000;
-EXEC sp_InsertTreatmentService 63, 'Dental Cleaning',           235000;
-EXEC sp_InsertTreatmentService 64, 'Ear Cleaning',              90000;
-EXEC sp_InsertTreatmentService 65, 'Physical Examination',      170000;
-EXEC sp_InsertTreatmentService 66, 'Deworming',                 115000;
-EXEC sp_InsertTreatmentService 67, 'Blood Test',                210000;
-EXEC sp_InsertTreatmentService 68, 'General Checkup',           155000;
-EXEC sp_InsertTreatmentService 69, 'Vaccination',               130000;
-EXEC sp_InsertTreatmentService 70, 'X-Ray',                     260000;
+(61, 14, 61, 7, 'Surgery', 400.00),
+(62, 87, 62, 7, 'Medication', 100.00),
+(63, 45, 63, 7, 'Checkup', 150.00),
+(64, 32, 64, 7, 'Vaccination', 200.00),
+(65, 68, 65, 7, 'Grooming', 120.00),
+(66, 5, 66, 7, 'Medication', 100.00),
+(67, 76, 67, 7, 'Checkup', 150.00),
+(68, 22, 68, 7, 'Surgery', 450.00),
+(69, 93, 69, 7, 'Grooming', 120.00),
+(70, 38, 70, 7, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 71, 'General Checkup',           145000;
-EXEC sp_InsertTreatmentService 72, 'Physical Examination',      180000;
-EXEC sp_InsertTreatmentService 73, 'Ear Cleaning',              85000;
-EXEC sp_InsertTreatmentService 74, 'Deworming',                 120000;
-EXEC sp_InsertTreatmentService 75, 'Dental Cleaning',           240000;
-EXEC sp_InsertTreatmentService 76, 'Blood Test',                205000;
-EXEC sp_InsertTreatmentService 77, 'General Checkup',           160000;
-EXEC sp_InsertTreatmentService 78, 'Vaccination',               135000;
-EXEC sp_InsertTreatmentService 79, 'Physical Examination',      175000;
-EXEC sp_InsertTreatmentService 80, 'X-Ray',                     270000;
+(71, 51, 71, 8, 'Vaccination', 200.00),
+(72, 19, 72, 8, 'Medication', 100.00),
+(73, 84, 73, 8, 'Checkup', 150.00),
+(74, 6, 74, 8, 'Grooming', 120.00),
+(75, 77, 75, 8, 'Surgery', 400.00),
+(76, 43, 76, 8, 'Checkup', 150.00),
+(77, 28, 77, 8, 'Medication', 100.00),
+(78, 95, 78, 8, 'Vaccination', 200.00),
+(79, 12, 79, 8, 'Grooming', 120.00),
+(80, 63, 80, 8, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 81, 'Ear Cleaning',              95000;
-EXEC sp_InsertTreatmentService 82, 'General Checkup',           155000;
-EXEC sp_InsertTreatmentService 83, 'Deworming',                 105000;
-EXEC sp_InsertTreatmentService 84, 'Dental Cleaning',           245000;
-EXEC sp_InsertTreatmentService 85, 'Blood Test',                215000;
-EXEC sp_InsertTreatmentService 86, 'General Checkup',           150000;
-EXEC sp_InsertTreatmentService 87, 'Physical Examination',      190000;
-EXEC sp_InsertTreatmentService 88, 'Vaccination',               125000;
-EXEC sp_InsertTreatmentService 89, 'Ear Cleaning',              90000;
-EXEC sp_InsertTreatmentService 90, 'X-Ray',                     265000;
+(81, 41, 81, 9, 'Medication', 100.00),
+(82, 67, 82, 9, 'Checkup', 150.00),
+(83, 9, 83, 9, 'Vaccination', 200.00),
+(84, 74, 84, 9, 'Surgery', 500.00),
+(85, 29, 85, 9, 'Grooming', 120.00),
+(86, 82, 86, 9, 'Checkup', 150.00),
+(87, 57, 87, 9, 'Medication', 100.00),
+(88, 20, 88, 9, 'Vaccination', 200.00),
+(89, 95, 89, 9, 'Grooming', 120.00),
+(90, 36, 90, 9, 'Checkup', 150.00),
 
-EXEC sp_InsertTreatmentService 91, 'Deworming',                 110000;
-EXEC sp_InsertTreatmentService 92, 'General Checkup',           145000;
-EXEC sp_InsertTreatmentService 93, 'Blood Test',                205000;
-EXEC sp_InsertTreatmentService 94, 'Physical Examination',      185000;
-EXEC sp_InsertTreatmentService 95, 'Dental Cleaning',           235000;
-EXEC sp_InsertTreatmentService 96, 'Ear Cleaning',              95000;
-EXEC sp_InsertTreatmentService 97, 'General Checkup',           160000;
-EXEC sp_InsertTreatmentService 98, 'Vaccination',               130000;
-EXEC sp_InsertTreatmentService 99, 'Deworming',                 115000;
-EXEC sp_InsertTreatmentService 100,'Blood Test',                210000;
+(91, 13, 91, 10, 'Surgery', 450.00),
+(92, 88, 92, 10, 'Checkup', 150.00),
+(93, 60, 93, 10, 'Medication', 100.00),
+(94, 44, 94, 10, 'Grooming', 120.00),
+(95, 73, 95, 10, 'Checkup', 150.00),
+(96, 25, 96, 10, 'Vaccination', 200.00),
+(97, 97, 97, 10, 'Surgery', 500.00),
+(98, 31, 98, 10, 'Checkup', 150.00),
+(99, 54, 99, 10, 'Medication', 100.00),
+(100, 18, 100, 10, 'Grooming', 120.00);
 
-EXEC sp_InsertTreatmentService 101,  'General Checkup',           150000;
-EXEC sp_InsertTreatmentService 102,  'Vaccination',               125000;
-EXEC sp_InsertTreatmentService 103,  'Deworming',                 110000;
-EXEC sp_InsertTreatmentService 104,  'Dental Cleaning',           225000;
-EXEC sp_InsertTreatmentService 105,  'General Checkup',           140000
-EXEC sp_InsertTreatmentService 106,  'Vaccination',               130000;
-EXEC sp_InsertTreatmentService 107,  'X-Ray',                     260000;
-EXEC sp_InsertTreatmentService 108,  'Blood Test',                200000;
-EXEC sp_InsertTreatmentService 109,  'Ear Cleaning',              95000;
-EXEC sp_InsertTreatmentService 110, 'General Checkup',           145000;
 
 -- Serves
-EXEC sp_InsertServes 1,  '2025-11-22', 1, 12, 11;
-EXEC sp_InsertServes 2,  '2025-11-22', 1, 37, 11;
-EXEC sp_InsertServes 3,  '2025-11-22', 1, 55, 11;
-EXEC sp_InsertServes 4,  '2025-11-22', 1, 92, 11;
-EXEC sp_InsertServes 5,  '2025-11-22', 1, 7,  11;
-EXEC sp_InsertServes 6,  '2025-11-22', 1, 84, 11;
-EXEC sp_InsertServes 7,  '2025-11-22', 1, 29, 11;
-EXEC sp_InsertServes 8,  '2025-11-22', 1, 48, 11;
-EXEC sp_InsertServes 9,  '2025-11-22', 1, 11, 11;
-EXEC sp_InsertServes 10, '2025-11-22', 1, 66, 11;
+INSERT INTO SERVES (serves_id, pet_id, staff_id, schedule, [status]) VALUES
+(1, 12, 11, '2025-11-22', 1),
+(2, 37, 11, '2025-11-22', 1),
+(3, 55, 11, '2025-11-22', 1),
+(4, 92, 11, '2025-11-22', 1),
+(5, 7,  11, '2025-11-22', 1),
+(6, 84, 11, '2025-11-22', 1),
+(7, 29, 11, '2025-11-22', 1),
+(8, 48, 11, '2025-11-22', 1),
+(9, 11, 11, '2025-11-22', 1),
+(10,66, 11, '2025-11-22', 1),
+(11,22, 12, '2025-11-23', 1),
+(12,91, 12, '2025-11-23', 1),
+(13,7,  12, '2025-11-23', 1),
+(14,48, 12, '2025-11-23', 1),
+(15,63, 12, '2025-11-23', 1),
+(16,35, 12, '2025-11-23', 1),
+(17,84, 12, '2025-11-23', 1),
+(18,19, 12, '2025-11-23', 1),
+(19,72, 12, '2025-11-23', 1),
+(20,57, 12, '2025-11-23', 1),
+(21,5,  13, '2025-11-24', 1),
+(22,88, 13, '2025-11-24', 1),
+(23,34, 13, '2025-11-24', 1),
+(24,72, 13, '2025-11-24', 1),
+(25,16, 13, '2025-11-24', 1),
+(26,49, 13, '2025-11-24', 1),
+(27,61, 13, '2025-11-24', 1),
+(28,27, 13, '2025-11-24', 1),
+(29,93, 13, '2025-11-24', 1),
+(30,11, 13, '2025-11-24', 1),
+(31,38, 14, '2025-11-25', 1),
+(32,76, 14, '2025-11-25', 1),
+(33,19, 14, '2025-11-25', 1),
+(34,64, 14, '2025-11-25', 1),
+(35,5,  14, '2025-11-25', 1),
+(36,87, 14, '2025-11-25', 1),
+(37,23, 14, '2025-11-25', 1),
+(38,90, 14, '2025-11-25', 1),
+(39,56, 14, '2025-11-25', 1),
+(40,12, 14, '2025-11-25', 1),
+(41,34, 15, '2025-11-26', 1),
+(42,7,  15, '2025-11-26', 1),
+(43,61, 15, '2025-11-26', 1),
+(44,98, 15, '2025-11-26', 1),
+(45,45, 15, '2025-11-26', 1),
+(46,29, 15, '2025-11-26', 1),
+(47,80, 15, '2025-11-26', 1),
+(48,53, 15, '2025-11-26', 1),
+(49,16, 15, '2025-11-26', 1),
+(50,72, 15, '2025-11-26', 1),
+(51,12, 16, '2025-11-27', 1),
+(52,44, 16, '2025-11-27', 1),
+(53,77, 16, '2025-11-27', 1),
+(54,3,  16, '2025-11-27', 1),
+(55,91, 16, '2025-11-27', 1),
+(56,66, 16, '2025-11-27', 1),
+(57,28, 16, '2025-11-27', 1),
+(58,53, 16, '2025-11-27', 1),
+(59,35, 16, '2025-11-27', 1),
+(60,82, 16, '2025-11-27', 1),
+(61,23, 17, '2025-11-28', 1),
+(62,87, 17, '2025-11-28', 1),
+(63,45, 17, '2025-11-28', 1),
+(64,12, 17, '2025-11-28', 1),
+(65,34, 17, '2025-11-28', 1),
+(66,56, 17, '2025-11-28', 1),
+(67,78, 17, '2025-11-28', 1),
+(68,9,  17, '2025-11-28', 1),
+(69,67, 17, '2025-11-28', 1),
+(70,41, 17, '2025-11-28', 1),
+(71,5,  18, '2025-11-29', 1),
+(72,62, 18, '2025-11-29', 1),
+(73,30, 18, '2025-11-29', 1),
+(74,89, 18, '2025-11-29', 1),
+(75,47, 18, '2025-11-29', 1),
+(76,18, 18, '2025-11-29', 1),
+(77,99, 18, '2025-11-29', 1),
+(78,36, 18, '2025-11-29', 1),
+(79,74, 18, '2025-11-29', 1),
+(80,50, 18, '2025-11-29', 1),
+(81,13, 19, '2025-11-30', 1),
+(82,69, 19, '2025-11-30', 1),
+(83,24, 19, '2025-11-30', 1),
+(84,88, 19, '2025-11-30', 1),
+(85,37, 19, '2025-11-30', 1),
+(86,61, 19, '2025-11-30', 1),
+(87,92, 19, '2025-11-30', 1),
+(88,7,  19, '2025-11-30', 1),
+(89,55, 19, '2025-11-30', 1),
+(90,33, 19, '2025-11-30', 1),
+(91,42, 20, '2025-12-01', 1),
+(92,81, 20, '2025-12-01', 1),
+(93,14, 20, '2025-12-01', 1),
+(94,63, 20, '2025-12-01', 1),
+(95,26, 20, '2025-12-01', 1),
+(96,97, 20, '2025-12-01', 1),
+(97,51, 20, '2025-12-01', 1),
+(98,34, 20, '2025-12-01', 1),
+(99,75, 20, '2025-12-01', 1),
+(100,9, 20, '2025-12-01', 1),
+(101,38, 11,  '2025-12-02', 1),
+(102,71, 11,  '2025-12-02', 0),
+(103,16, 11,  '2025-12-02', 1),
+(104,84, 11,  '2025-12-02', 0),
+(105,59, 11,  '2025-12-02', 1),
+(106,45, 11,  '2025-12-02', 1),
+(107,28, 11,  '2025-12-02', 1),
+(108,90, 11,  '2025-12-02', 1),
+(109,64, 11,  '2025-12-02', 0),
+(110,11, 11,  '2025-12-02', 1);
 
-EXEC sp_InsertServes 11, '2025-11-23', 1, 22, 12;
-EXEC sp_InsertServes 12, '2025-11-23', 1, 91, 12;
-EXEC sp_InsertServes 13, '2025-11-23', 1, 7, 12;
-EXEC sp_InsertServes 14, '2025-11-23', 1, 48, 12;
-EXEC sp_InsertServes 15, '2025-11-23', 1, 63, 12;
-EXEC sp_InsertServes 16, '2025-11-23', 1, 35, 12;
-EXEC sp_InsertServes 17, '2025-11-23', 1, 84, 12;
-EXEC sp_InsertServes 18, '2025-11-23', 1, 19, 12;
-EXEC sp_InsertServes 19, '2025-11-23', 1, 72, 12;
-EXEC sp_InsertServes 20, '2025-11-23', 1, 57, 12;
-
-EXEC sp_InsertServes 21, '2025-11-24', 1, 5, 13;
-EXEC sp_InsertServes 22, '2025-11-24', 1, 88, 13;
-EXEC sp_InsertServes 23, '2025-11-24', 1, 34, 13;
-EXEC sp_InsertServes 24, '2025-11-24', 1, 72, 13;
-EXEC sp_InsertServes 25, '2025-11-24', 1, 16, 13;
-EXEC sp_InsertServes 26, '2025-11-24', 1, 49, 13;
-EXEC sp_InsertServes 27, '2025-11-24', 1, 61, 13;
-EXEC sp_InsertServes 28, '2025-11-24', 1, 27, 13;
-EXEC sp_InsertServes 29, '2025-11-24', 1, 93, 13;
-EXEC sp_InsertServes 30, '2025-11-24', 1, 11, 13;
-
-EXEC sp_InsertServes 31, '2025-11-25', 1, 38, 14;
-EXEC sp_InsertServes 32, '2025-11-25', 1, 76, 14;
-EXEC sp_InsertServes 33, '2025-11-25', 1, 19, 14;
-EXEC sp_InsertServes 34, '2025-11-25', 1, 64, 14;
-EXEC sp_InsertServes 35, '2025-11-25', 1, 5, 14;
-EXEC sp_InsertServes 36, '2025-11-25', 1, 87, 14;
-EXEC sp_InsertServes 37, '2025-11-25', 1, 23, 14;
-EXEC sp_InsertServes 38, '2025-11-25', 1, 90, 14;
-EXEC sp_InsertServes 39, '2025-11-25', 1, 56, 14;
-EXEC sp_InsertServes 40, '2025-11-25', 1, 12, 14;
-
-EXEC sp_InsertServes 41, '2025-11-26', 1, 34, 15;
-EXEC sp_InsertServes 42, '2025-11-26', 1, 7, 15;
-EXEC sp_InsertServes 43, '2025-11-26', 1, 61, 15;
-EXEC sp_InsertServes 44, '2025-11-26', 1, 98, 15;
-EXEC sp_InsertServes 45, '2025-11-26', 1, 45, 15;
-EXEC sp_InsertServes 46, '2025-11-26', 1, 29, 15;
-EXEC sp_InsertServes 47, '2025-11-26', 1, 80, 15;
-EXEC sp_InsertServes 48, '2025-11-26', 1, 53, 15;
-EXEC sp_InsertServes 49, '2025-11-26', 1, 16, 15;
-EXEC sp_InsertServes 50, '2025-11-26', 1, 72, 15;
-
-EXEC sp_InsertServes 51, '2025-11-27', 1, 12, 16;
-EXEC sp_InsertServes 52, '2025-11-27', 1, 44, 16;
-EXEC sp_InsertServes 53, '2025-11-27', 1, 77, 16;
-EXEC sp_InsertServes 54, '2025-11-27', 1, 3, 16;
-EXEC sp_InsertServes 55, '2025-11-27', 1, 91, 16;
-EXEC sp_InsertServes 56, '2025-11-27', 1, 66, 16;
-EXEC sp_InsertServes 57, '2025-11-27', 1, 28, 16;
-EXEC sp_InsertServes 58, '2025-11-27', 1, 53, 16;
-EXEC sp_InsertServes 59, '2025-11-27', 1, 35, 16;
-EXEC sp_InsertServes 60, '2025-11-27', 1, 82, 16;
-
-EXEC sp_InsertServes 61, '2025-11-28', 1, 23, 17;
-EXEC sp_InsertServes 62, '2025-11-28', 1, 87, 17;
-EXEC sp_InsertServes 63, '2025-11-28', 1, 45, 17;
-EXEC sp_InsertServes 64, '2025-11-28', 1, 12, 17;
-EXEC sp_InsertServes 65, '2025-11-28', 1, 34, 17;
-EXEC sp_InsertServes 66, '2025-11-28', 1, 56, 17;
-EXEC sp_InsertServes 67, '2025-11-28', 1, 78, 17;
-EXEC sp_InsertServes 68, '2025-11-28', 1, 9, 17;
-EXEC sp_InsertServes 69, '2025-11-28', 1, 67, 17;
-EXEC sp_InsertServes 70, '2025-11-28', 1, 41, 17;
-
-EXEC sp_InsertServes 71, '2025-11-29', 1, 5, 18;
-EXEC sp_InsertServes 72, '2025-11-29', 1, 62, 18;
-EXEC sp_InsertServes 73, '2025-11-29', 1, 30, 18;
-EXEC sp_InsertServes 74, '2025-11-29', 1, 89, 18;
-EXEC sp_InsertServes 75, '2025-11-29', 1, 47, 18;
-EXEC sp_InsertServes 76, '2025-11-29', 1, 18, 18;
-EXEC sp_InsertServes 77, '2025-11-29', 1, 99, 18;
-EXEC sp_InsertServes 78, '2025-11-29', 1, 36, 18;
-EXEC sp_InsertServes 79, '2025-11-29', 1, 74, 18;
-EXEC sp_InsertServes 80, '2025-11-29', 1, 50, 18;
-
-EXEC sp_InsertServes 81, '2025-11-30', 1, 13, 19;
-EXEC sp_InsertServes 82, '2025-11-30', 1, 69, 19;
-EXEC sp_InsertServes 83, '2025-11-30', 1, 24, 19;
-EXEC sp_InsertServes 84, '2025-11-30', 1, 88, 19;
-EXEC sp_InsertServes 85, '2025-11-30', 1, 37, 19;
-EXEC sp_InsertServes 86, '2025-11-30', 1, 61, 19;
-EXEC sp_InsertServes 87, '2025-11-30', 1, 92, 19;
-EXEC sp_InsertServes 88, '2025-11-30', 1, 7, 19;
-EXEC sp_InsertServes 89, '2025-11-30', 1, 55, 19;
-EXEC sp_InsertServes 90, '2025-11-30', 1, 33, 19;
-
-EXEC sp_InsertServes 91, '2025-12-01', 1, 42, 20;
-EXEC sp_InsertServes 92, '2025-12-01', 1, 81, 20;
-EXEC sp_InsertServes 93, '2025-12-01', 1, 14, 20;
-EXEC sp_InsertServes 94, '2025-12-01', 1, 63, 20;
-EXEC sp_InsertServes 95, '2025-12-01', 1, 26, 20;
-EXEC sp_InsertServes 96, '2025-12-01', 1, 97, 20;
-EXEC sp_InsertServes 97, '2025-12-01', 1, 51, 20;
-EXEC sp_InsertServes 98, '2025-12-01', 1, 34, 20;
-EXEC sp_InsertServes 99, '2025-12-01', 1, 75, 20;
-EXEC sp_InsertServes 100,'2025-12-01', 1, 9, 20;
-
-EXEC sp_InsertServes 101,'2025-12-02', 1, 38, 1;
-EXEC sp_InsertServes 102,'2025-12-02', 0, 71, 1;
-EXEC sp_InsertServes 103,'2025-12-02', 1, 16, 1;
-EXEC sp_InsertServes 104,'2025-12-02', 0, 84, 1;
-EXEC sp_InsertServes 105,'2025-12-02', 1, 59, 1;
-EXEC sp_InsertServes 106,'2025-12-02', 1, 45, 1;
-EXEC sp_InsertServes 107,'2025-12-02', 1, 28, 1;
-EXEC sp_InsertServes 108,'2025-12-02', 1, 90, 1;
-EXEC sp_InsertServes 109,'2025-12-02', 0, 64, 1;
-EXEC sp_InsertServes 110,'2025-12-02', 1, 11, 1;
 
 -- Serve Services
-EXEC sp_InsertServesService 1, 'Checkup', 75000;
-EXEC sp_InsertServesService 2, 'Grooming', 120000;
-EXEC sp_InsertServesService 3, 'Vaccination', 150000;
-EXEC sp_InsertServesService 4, 'Deworming', 95000;
-EXEC sp_InsertServesService 5, 'Bathing', 65000;
-EXEC sp_InsertServesService 6, 'Dental Care', 200000;
-EXEC sp_InsertServesService 7, 'Checkup', 80000;
-EXEC sp_InsertServesService 8, 'Grooming', 130000;
-EXEC sp_InsertServesService 9, 'Surgery', 260000;
-EXEC sp_InsertServesService 10, 'Vaccination', 170000;
+INSERT INTO SERVES_SERVICES (serves_id, pet_id, staff_id, [type], price) VALUES
+(1, 12, 11, 'Grooming Basic', 50.00),
+(2, 37, 11, 'Grooming Premium', 80.00),
+(3, 55, 11, 'Nail Trim', 20.00),
+(4, 92, 11, 'Bath', 30.00),
+(5, 7,  11, 'Fur Treatment', 45.00),
+(6, 84, 11, 'Ear Cleaning', 25.00),
+(7, 29, 11, 'Teeth Brushing', 15.00),
+(8, 48, 11, 'Flea Treatment', 40.00),
+(9, 11, 11, 'De-shedding', 35.00),
+(10,66, 11, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 11, 'Bathing', 70000;
-EXEC sp_InsertServesService 12, 'Nail Trim', 55000;
-EXEC sp_InsertServesService 13, 'Checkup', 90000;
-EXEC sp_InsertServesService 14, 'Dental Care', 195000;
-EXEC sp_InsertServesService 15, 'Vaccination', 160000;
-EXEC sp_InsertServesService 16, 'Grooming', 140000;
-EXEC sp_InsertServesService 17, 'Deworming', 85000;
-EXEC sp_InsertServesService 18, 'Surgery', 270000;
-EXEC sp_InsertServesService 19, 'Bathing', 60000;
-EXEC sp_InsertServesService 20, 'Checkup', 78000;
+(11,22, 12, 'Grooming Basic', 50.00),
+(12,91, 12, 'Grooming Premium', 80.00),
+(13,7,  12, 'Nail Trim', 20.00),
+(14,48, 12, 'Bath', 30.00),
+(15,63, 12, 'Fur Treatment', 45.00),
+(16,35, 12, 'Ear Cleaning', 25.00),
+(17,84, 12, 'Teeth Brushing', 15.00),
+(18,19, 12, 'Flea Treatment', 40.00),
+(19,72, 12, 'De-shedding', 35.00),
+(20,57, 12, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 21, 'Dental Care', 210000;
-EXEC sp_InsertServesService 22, 'Nail Trim', 60000;
-EXEC sp_InsertServesService 23, 'Vaccination', 180000;
-EXEC sp_InsertServesService 24, 'Grooming', 135000;
-EXEC sp_InsertServesService 25, 'Bathing', 62000;
-EXEC sp_InsertServesService 26, 'Checkup', 83000;
-EXEC sp_InsertServesService 27, 'Deworming', 92000;
-EXEC sp_InsertServesService 28, 'Dental Care', 185000;
-EXEC sp_InsertServesService 29, 'Surgery', 255000;
-EXEC sp_InsertServesService 30, 'Nail Trim', 58000;
+(21,5,  13, 'Grooming Basic', 50.00),
+(22,88, 13, 'Grooming Premium', 80.00),
+(23,34, 13, 'Nail Trim', 20.00),
+(24,72, 13, 'Bath', 30.00),
+(25,16, 13, 'Fur Treatment', 45.00),
+(26,49, 13, 'Ear Cleaning', 25.00),
+(27,61, 13, 'Teeth Brushing', 15.00),
+(28,27, 13, 'Flea Treatment', 40.00),
+(29,93, 13, 'De-shedding', 35.00),
+(30,11, 13, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 31, 'Checkup', 87000;
-EXEC sp_InsertServesService 32, 'Bathing', 61000;
-EXEC sp_InsertServesService 33, 'Grooming', 125000;
-EXEC sp_InsertServesService 34, 'Vaccination', 200000;
-EXEC sp_InsertServesService 35, 'Dental Care', 190000;
-EXEC sp_InsertServesService 36, 'Deworming', 98000;
-EXEC sp_InsertServesService 37, 'Checkup', 76000;
-EXEC sp_InsertServesService 38, 'Grooming', 128000;
-EXEC sp_InsertServesService 39, 'Surgery', 300000;
-EXEC sp_InsertServesService 40, 'Bathing', 64000;
+(31,38, 14, 'Grooming Basic', 50.00),
+(32,76, 14, 'Grooming Premium', 80.00),
+(33,19, 14, 'Nail Trim', 20.00),
+(34,64, 14, 'Bath', 30.00),
+(35,5,  14, 'Fur Treatment', 45.00),
+(36,87, 14, 'Ear Cleaning', 25.00),
+(37,23, 14, 'Teeth Brushing', 15.00),
+(38,90, 14, 'Flea Treatment', 40.00),
+(39,56, 14, 'De-shedding', 35.00),
+(40,12, 14, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 41, 'Nail Trim', 59000;
-EXEC sp_InsertServesService 42, 'Checkup', 89000;
-EXEC sp_InsertServesService 43, 'Vaccination', 150000;
-EXEC sp_InsertServesService 44, 'Dental Care', 205000;
-EXEC sp_InsertServesService 45, 'Deworming', 88000;
-EXEC sp_InsertServesService 46, 'Grooming', 138000;
-EXEC sp_InsertServesService 47, 'Bathing', 68000;
-EXEC sp_InsertServesService 48, 'Surgery', 275000;
-EXEC sp_InsertServesService 49, 'Checkup', 90000;
-EXEC sp_InsertServesService 50, 'Nail Trim', 56000;
+(41,34, 15, 'Grooming Basic', 50.00),
+(42,7,  15, 'Grooming Premium', 80.00),
+(43,61, 15, 'Nail Trim', 20.00),
+(44,98, 15, 'Bath', 30.00),
+(45,45, 15, 'Fur Treatment', 45.00),
+(46,29, 15, 'Ear Cleaning', 25.00),
+(47,80, 15, 'Teeth Brushing', 15.00),
+(48,53, 15, 'Flea Treatment', 40.00),
+(49,16, 15, 'De-shedding', 35.00),
+(50,72, 15, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 51, 'Dental Care', 215000;
-EXEC sp_InsertServesService 52, 'Grooming', 140000;
-EXEC sp_InsertServesService 53, 'Bathing', 62000;
-EXEC sp_InsertServesService 54, 'Checkup', 84000;
-EXEC sp_InsertServesService 55, 'Vaccination', 165000;
-EXEC sp_InsertServesService 56, 'Deworming', 96000;
-EXEC sp_InsertServesService 57, 'Surgery', 285000;
-EXEC sp_InsertServesService 58, 'Bathing', 63000;
-EXEC sp_InsertServesService 59, 'Grooming', 136000;
-EXEC sp_InsertServesService 60, 'Checkup', 91000;
+(51,12, 16, 'Grooming Basic', 50.00),
+(52,44, 16, 'Grooming Premium', 80.00),
+(53,77, 16, 'Nail Trim', 20.00),
+(54,3,  16, 'Bath', 30.00),
+(55,91, 16, 'Fur Treatment', 45.00),
+(56,66, 16, 'Ear Cleaning', 25.00),
+(57,28, 16, 'Teeth Brushing', 15.00),
+(58,53, 16, 'Flea Treatment', 40.00),
+(59,35, 16, 'De-shedding', 35.00),
+(60,82, 16, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 61, 'Dental Care', 220000;
-EXEC sp_InsertServesService 62, 'Nail Trim', 58000;
-EXEC sp_InsertServesService 63, 'Checkup', 86000;
-EXEC sp_InsertServesService 64, 'Vaccination', 155000;
-EXEC sp_InsertServesService 65, 'Grooming', 133000;
-EXEC sp_InsertServesService 66, 'Deworming', 97000;
-EXEC sp_InsertServesService 67, 'Bathing', 65000;
-EXEC sp_InsertServesService 68, 'Dental Care', 230000;
-EXEC sp_InsertServesService 69, 'Checkup', 94000;
-EXEC sp_InsertServesService 70, 'Surgery', 295000;
+(61,23, 17, 'Grooming Basic', 50.00),
+(62,87, 17, 'Grooming Premium', 80.00),
+(63,45, 17, 'Nail Trim', 20.00),
+(64,12, 17, 'Bath', 30.00),
+(65,34, 17, 'Fur Treatment', 45.00),
+(66,56, 17, 'Ear Cleaning', 25.00),
+(67,78, 17, 'Teeth Brushing', 15.00),
+(68,9,  17, 'Flea Treatment', 40.00),
+(69,67, 17, 'De-shedding', 35.00),
+(70,41, 17, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 71, 'Vaccination', 175000;
-EXEC sp_InsertServesService 72, 'Nail Trim', 54000;
-EXEC sp_InsertServesService 73, 'Grooming', 132000;
-EXEC sp_InsertServesService 74, 'Bathing', 67000;
-EXEC sp_InsertServesService 75, 'Checkup', 82000;
-EXEC sp_InsertServesService 76, 'Dental Care', 210000;
-EXEC sp_InsertServesService 77, 'Deworming', 93000;
-EXEC sp_InsertServesService 78, 'Surgery', 280000;
-EXEC sp_InsertServesService 79, 'Bathing', 60000;
-EXEC sp_InsertServesService 80, 'Checkup', 85000;
+(71,5,  18, 'Grooming Basic', 50.00),
+(72,62, 18, 'Grooming Premium', 80.00),
+(73,30, 18, 'Nail Trim', 20.00),
+(74,89, 18, 'Bath', 30.00),
+(75,47, 18, 'Fur Treatment', 45.00),
+(76,18, 18, 'Ear Cleaning', 25.00),
+(77,99, 18, 'Teeth Brushing', 15.00),
+(78,36, 18, 'Flea Treatment', 40.00),
+(79,74, 18, 'De-shedding', 35.00),
+(80,50, 18, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 81, 'Grooming', 142000;
-EXEC sp_InsertServesService 82, 'Vaccination', 190000;
-EXEC sp_InsertServesService 83, 'Nail Trim', 58000;
-EXEC sp_InsertServesService 84, 'Dental Care', 200000;
-EXEC sp_InsertServesService 85, 'Deworming', 91000;
-EXEC sp_InsertServesService 86, 'Bathing', 62000;
-EXEC sp_InsertServesService 87, 'Checkup', 89000;
-EXEC sp_InsertServesService 88, 'Grooming', 139000;
-EXEC sp_InsertServesService 89, 'Surgery', 260000;
-EXEC sp_InsertServesService 90, 'Vaccination', 160000;
+(81,13, 19, 'Grooming Basic', 50.00),
+(82,69, 19, 'Grooming Premium', 80.00),
+(83,24, 19, 'Nail Trim', 20.00),
+(84,88, 19, 'Bath', 30.00),
+(85,37, 19, 'Fur Treatment', 45.00),
+(86,61, 19, 'Ear Cleaning', 25.00),
+(87,92, 19, 'Teeth Brushing', 15.00),
+(88,7,  19, 'Flea Treatment', 40.00),
+(89,55, 19, 'De-shedding', 35.00),
+(90,33, 19, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 91, 'Nail Trim', 56000;
-EXEC sp_InsertServesService 92, 'Dental Care', 225000;
-EXEC sp_InsertServesService 93, 'Checkup', 83000;
-EXEC sp_InsertServesService 94, 'Bathing', 63000;
-EXEC sp_InsertServesService 95, 'Grooming', 137000;
-EXEC sp_InsertServesService 96, 'Vaccination', 180000;
-EXEC sp_InsertServesService 97, 'Deworming', 94000;
-EXEC sp_InsertServesService 98, 'Dental Care', 215000;
-EXEC sp_InsertServesService 99, 'Surgery', 290000;
-EXEC sp_InsertServesService 100, 'Checkup', 87000;
+(91,42, 20, 'Grooming Basic', 50.00),
+(92,81, 20, 'Grooming Premium', 80.00),
+(93,14, 20, 'Nail Trim', 20.00),
+(94,63, 20, 'Bath', 30.00),
+(95,26, 20, 'Fur Treatment', 45.00),
+(96,97, 20, 'Ear Cleaning', 25.00),
+(97,51, 20, 'Teeth Brushing', 15.00),
+(98,34, 20, 'Flea Treatment', 40.00),
+(99,75, 20, 'De-shedding', 35.00),
+(100,9, 20, 'Massage', 55.00),
 
-EXEC sp_InsertServesService 101, 'Checkup', 75000;
-EXEC sp_InsertServesService 102, 'Grooming', 120000;
-EXEC sp_InsertServesService 103, 'Vaccination', 150000;
-EXEC sp_InsertServesService 104, 'Deworming', 95000;
-EXEC sp_InsertServesService 105, 'Bathing', 65000;
-EXEC sp_InsertServesService 106, 'Dental Care', 200000;
-EXEC sp_InsertServesService 107, 'Checkup', 80000;
-EXEC sp_InsertServesService 108, 'Grooming', 130000;
-EXEC sp_InsertServesService 109, 'Surgery', 260000;
-EXEC sp_InsertServesService 110, 'Vaccination', 170000;
+(101,38, 11, 'Grooming Basic', 50.00),
+(102,71, 11, 'Grooming Premium', 80.00),
+(103,16, 11, 'Nail Trim', 20.00),
+(104,84, 11, 'Bath', 30.00),
+(105,59, 11, 'Fur Treatment', 45.00),
+(106,45, 11, 'Ear Cleaning', 25.00),
+(107,28, 11, 'Teeth Brushing', 15.00),
+(108,90, 11, 'Flea Treatment', 40.00),
+(109,64, 11, 'De-shedding', 35.00),
+(110,11, 11, 'Massage', 55.00);
 
 -- Pays
-EXEC sp_InsertPays 1,  'Cash',       '2025-11-22',  15, 21;
-EXEC sp_InsertPays 2,  'Debit',      '2025-11-22',  37, 21;
-EXEC sp_InsertPays 3,  'Credit',     '2025-11-22',  42, 21;
-EXEC sp_InsertPays 4,  'E-Wallet',   '2025-11-22',  11, 21;
-EXEC sp_InsertPays 5,  'Cash',       '2025-11-22',  19, 21;
-EXEC sp_InsertPays 6,  'Debit',      '2025-11-22',  21, 21;
-EXEC sp_InsertPays 7,  'Credit',     '2025-11-22',  45, 21;
-EXEC sp_InsertPays 8,  'E-Wallet',   '2025-11-22',  16, 21;
-EXEC sp_InsertPays 9,  'Cash',       '2025-11-22',  33, 21;
-EXEC sp_InsertPays 10, 'Debit',      '2025-11-22',  50, 21;
+INSERT INTO PAYS (payment_id, cust_id, staff_id, pay_method, [datetime]) VALUES
+(1, 15, 21, 'Cash',       '2025-11-22'),
+(2, 37, 21, 'Debit',      '2025-11-22'),
+(3, 42, 21, 'Credit',     '2025-11-22'),
+(4, 11, 21, 'E-Wallet',   '2025-11-22'),
+(5, 19, 21, 'Cash',       '2025-11-22'),
+(6, 21, 21, 'Debit',      '2025-11-22'),
+(7, 45, 21, 'Credit',     '2025-11-22'),
+(8, 16, 21, 'E-Wallet',   '2025-11-22'),
+(9, 33, 21, 'Cash',       '2025-11-22'),
+(10,50, 21, 'Debit',      '2025-11-22'),
+(11,29, 22, 'Credit',     '2025-11-23'),
+(12,40, 22, 'E-Wallet',   '2025-11-23'),
+(13,52, 22, 'Cash',       '2025-11-23'),
+(14,63, 22, 'Debit',      '2025-11-23'),
+(15,18, 22, 'Credit',     '2025-11-23'),
+(16,91, 22, 'E-Wallet',   '2025-11-23'),
+(17,70, 22, 'Cash',       '2025-11-23'),
+(18,30, 22, 'Debit',      '2025-11-23'),
+(19,10, 22, 'Credit',     '2025-11-23'),
+(20,99, 22, 'E-Wallet',   '2025-11-23'),
+(21,7,  23, 'Cash',       '2025-11-24'),
+(22,55, 23, 'Debit',      '2025-11-24'),
+(23,36, 23, 'Credit',     '2025-11-24'),
+(24,82, 23, 'E-Wallet',   '2025-11-24'),
+(25,19, 23, 'Cash',       '2025-11-24'),
+(26,44, 23, 'Debit',      '2025-11-24'),
+(27,68, 23, 'Credit',     '2025-11-24'),
+(28,13, 23, 'E-Wallet',   '2025-11-24'),
+(29,97, 23, 'Cash',       '2025-11-24'),
+(30,50, 23, 'Debit',      '2025-11-24'),
+(31,21, 24, 'Credit',     '2025-11-25'),
+(32,61, 24, 'E-Wallet',   '2025-11-25'),
+(33,88, 24, 'Cash',       '2025-11-25'),
+(34,34, 24, 'Debit',      '2025-11-25'),
+(35,72, 24, 'Credit',     '2025-11-25'),
+(36,17, 24, 'E-Wallet',   '2025-11-25'),
+(37,39, 24, 'Cash',       '2025-11-25'),
+(38,55, 24, 'Debit',      '2025-11-25'),
+(39,12, 24, 'Credit',     '2025-11-25'),
+(40,93, 24, 'E-Wallet',   '2025-11-25'),
+(41,46, 25, 'Cash',       '2025-11-26'),
+(42,7,  25, 'Debit',      '2025-11-26'),
+(43,81, 25, 'Credit',     '2025-11-26'),
+(44,29, 25, 'E-Wallet',   '2025-11-26'),
+(45,63, 25, 'Cash',       '2025-11-26'),
+(46,90, 25, 'Debit',      '2025-11-26'),
+(47,14, 25, 'Credit',     '2025-11-26'),
+(48,58, 25, 'E-Wallet',   '2025-11-26'),
+(49,35, 25, 'Cash',       '2025-11-26'),
+(50,77, 25, 'Debit',      '2025-11-26'),
+(51,22, 21, 'Credit',     '2025-11-27'),
+(52,66, 21, 'E-Wallet',   '2025-11-27'),
+(53,8,  21, 'Cash',       '2025-11-27'),
+(54,53, 21, 'Debit',      '2025-11-27'),
+(55,91, 21, 'Credit',     '2025-11-27'),
+(56,40, 21, 'E-Wallet',   '2025-11-27'),
+(57,3,  21, 'Cash',       '2025-11-27'),
+(58,79, 21, 'Debit',      '2025-11-27'),
+(59,37, 21, 'Credit',     '2025-11-27'),
+(60,12, 21, 'E-Wallet',   '2025-11-27'),
+(61,44, 22, 'Cash',       '2025-11-28'),
+(62,9,  22, 'Debit',      '2025-11-28'),
+(63,73, 22, 'Credit',     '2025-11-28'),
+(64,28, 22, 'E-Wallet',   '2025-11-28'),
+(65,56, 22, 'Cash',       '2025-11-28'),
+(66,91, 22, 'Debit',      '2025-11-28'),
+(67,15, 22, 'Credit',     '2025-11-28'),
+(68,38, 22, 'E-Wallet',   '2025-11-28'),
+(69,61, 22, 'Cash',       '2025-11-28'),
+(70,7,  22, 'Debit',      '2025-11-28'),
+(71,82, 23, 'Credit',     '2025-11-29'),
+(72,34, 23, 'E-Wallet',   '2025-11-29'),
+(73,10, 23, 'Cash',       '2025-11-29'),
+(74,59, 23, 'Debit',      '2025-11-29'),
+(75,95, 23, 'Credit',     '2025-11-29'),
+(76,48, 23, 'E-Wallet',   '2025-11-29'),
+(77,22, 23, 'Cash',       '2025-11-29'),
+(78,66, 23, 'Debit',      '2025-11-29'),
+(79,30, 23, 'Credit',     '2025-11-29'),
+(80,11, 23, 'E-Wallet',   '2025-11-29'),
+(81,14, 24, 'Cash',       '2025-11-30'),
+(82,79, 24, 'Debit',      '2025-11-30'),
+(83,41, 24, 'Credit',     '2025-11-30'),
+(84,57, 24, 'E-Wallet',   '2025-11-30'),
+(85,36, 24, 'Cash',       '2025-11-30'),
+(86,69, 24, 'Debit',      '2025-11-30'),
+(87,24, 24, 'Credit',     '2025-11-30'),
+(88,63, 24, 'E-Wallet',   '2025-11-30'),
+(89,12, 24, 'Cash',       '2025-11-30'),
+(90,85, 24, 'Debit',      '2025-11-30'),
+(91,33, 25, 'Credit',     '2025-12-01'),
+(92,70, 25, 'E-Wallet',   '2025-12-01'),
+(93,5,  25, 'Cash',       '2025-12-01'),
+(94,90, 25, 'Debit',      '2025-12-01'),
+(95,48, 25, 'Credit',     '2025-12-01'),
+(96,17, 25, 'E-Wallet',   '2025-12-01'),
+(97,61, 25, 'Cash',       '2025-12-01'),
+(98,39, 25, 'Debit',      '2025-12-01'),
+(99,27, 25, 'Credit',     '2025-12-01'),
+(100,72, 25, 'E-Wallet',  '2025-12-01'),
+(101,54, 21, 'Cash',      '2025-12-02'),
+(102,11, 21, 'Debit',     '2025-12-02'),
+(103,83, 21, 'Credit',    '2025-12-02'),
+(104,38, 21, 'E-Wallet',  '2025-12-02'),
+(105,65, 21, 'Cash',      '2025-12-02'),
+(106,22, 21, 'Debit',     '2025-12-02'),
+(107,7,  21, 'Credit',    '2025-12-02'),
+(108,44, 21, 'E-Wallet',  '2025-12-02'),
+(109,92, 21, 'Cash',      '2025-12-02'),
+(110,30, 21, 'Debit',     '2025-12-02');
 
-EXEC sp_InsertPays 11, 'Credit',     '2025-11-23',  29, 22;
-EXEC sp_InsertPays 12, 'E-Wallet',   '2025-11-23',  40, 22;
-EXEC sp_InsertPays 13, 'Cash',       '2025-11-23',  52, 22;
-EXEC sp_InsertPays 14, 'Debit',      '2025-11-23',  63, 22;
-EXEC sp_InsertPays 15, 'Credit',     '2025-11-23',  18, 22;
-EXEC sp_InsertPays 16, 'E-Wallet',   '2025-11-23',  91, 22;
-EXEC sp_InsertPays 17, 'Cash',       '2025-11-23',  70, 22;
-EXEC sp_InsertPays 18, 'Debit',      '2025-11-23',  30, 22;
-EXEC sp_InsertPays 19, 'Credit',     '2025-11-23',  10, 22;
-EXEC sp_InsertPays 20, 'E-Wallet',   '2025-11-23',  99, 22;
-
-EXEC sp_InsertPays 21, 'Cash',       '2025-11-24',  7, 23;
-EXEC sp_InsertPays 22, 'Debit',      '2025-11-24',  55, 23;
-EXEC sp_InsertPays 23, 'Credit',     '2025-11-24',  36, 23;
-EXEC sp_InsertPays 24, 'E-Wallet',   '2025-11-24',  82, 23;
-EXEC sp_InsertPays 25, 'Cash',       '2025-11-24',  19, 23;
-EXEC sp_InsertPays 26, 'Debit',      '2025-11-24',  44, 23;
-EXEC sp_InsertPays 27, 'Credit',     '2025-11-24',  68, 23;
-EXEC sp_InsertPays 28, 'E-Wallet',   '2025-11-24',  13, 23;
-EXEC sp_InsertPays 29, 'Cash',       '2025-11-24',  97, 23;
-EXEC sp_InsertPays 30, 'Debit',      '2025-11-24',  50, 23;
-
-EXEC sp_InsertPays 31, 'Credit',     '2025-11-25',  21, 24;
-EXEC sp_InsertPays 32, 'E-Wallet',   '2025-11-25',  61, 24;
-EXEC sp_InsertPays 33, 'Cash',       '2025-11-25',  88, 24;
-EXEC sp_InsertPays 34, 'Debit',      '2025-11-25',  34, 24;
-EXEC sp_InsertPays 35, 'Credit',     '2025-11-25',  72, 24;
-EXEC sp_InsertPays 36, 'E-Wallet',   '2025-11-25',  17, 24;
-EXEC sp_InsertPays 37, 'Cash',       '2025-11-25',  39, 24;
-EXEC sp_InsertPays 38, 'Debit',      '2025-11-25',  55, 24;
-EXEC sp_InsertPays 39, 'Credit',     '2025-11-25',  12, 24;
-EXEC sp_InsertPays 40, 'E-Wallet',   '2025-11-25',  93, 24;
-
-EXEC sp_InsertPays 41, 'Cash',       '2025-11-26',  46, 25;
-EXEC sp_InsertPays 42, 'Debit',      '2025-11-26',  7, 25;
-EXEC sp_InsertPays 43, 'Credit',     '2025-11-26',  81, 25;
-EXEC sp_InsertPays 44, 'E-Wallet',   '2025-11-26',  29, 25;
-EXEC sp_InsertPays 45, 'Cash',       '2025-11-26',  63, 25;
-EXEC sp_InsertPays 46, 'Debit',      '2025-11-26',  90, 25;
-EXEC sp_InsertPays 47, 'Credit',     '2025-11-26',  14, 25;
-EXEC sp_InsertPays 48, 'E-Wallet',   '2025-11-26',  58, 25;
-EXEC sp_InsertPays 49, 'Cash',       '2025-11-26',  35, 25;
-EXEC sp_InsertPays 50, 'Debit',      '2025-11-26',  77, 25;
-
-EXEC sp_InsertPays 51, 'Credit',     '2025-11-27',  22, 21;
-EXEC sp_InsertPays 52, 'E-Wallet',   '2025-11-27',  66, 21;
-EXEC sp_InsertPays 53, 'Cash',       '2025-11-27',  8, 21;
-EXEC sp_InsertPays 54, 'Debit',      '2025-11-27',  53, 21;
-EXEC sp_InsertPays 55, 'Credit',     '2025-11-27',  91, 21;
-EXEC sp_InsertPays 56, 'E-Wallet',   '2025-11-27',  40, 21;
-EXEC sp_InsertPays 57, 'Cash',       '2025-11-27',  3, 21;
-EXEC sp_InsertPays 58, 'Debit',      '2025-11-27',  79, 21;
-EXEC sp_InsertPays 59, 'Credit',     '2025-11-27',  37, 21;
-EXEC sp_InsertPays 60, 'E-Wallet',   '2025-11-27',  12, 21;
-
-EXEC sp_InsertPays 61, 'Cash',       '2025-11-28',  44, 22;
-EXEC sp_InsertPays 62, 'Debit',      '2025-11-28',  9, 22;
-EXEC sp_InsertPays 63, 'Credit',     '2025-11-28',  73, 22;
-EXEC sp_InsertPays 64, 'E-Wallet',   '2025-11-28',  28, 22;
-EXEC sp_InsertPays 65, 'Cash',       '2025-11-28',  56, 22;
-EXEC sp_InsertPays 66, 'Debit',      '2025-11-28',  91, 22;
-EXEC sp_InsertPays 67, 'Credit',     '2025-11-28',  15, 22;
-EXEC sp_InsertPays 68, 'E-Wallet',   '2025-11-28',  38, 22;
-EXEC sp_InsertPays 69, 'Cash',       '2025-11-28',  61, 22;
-EXEC sp_InsertPays 70, 'Debit',      '2025-11-28',  7, 22;
-
-EXEC sp_InsertPays 71, 'Credit',     '2025-11-29',  82, 23;
-EXEC sp_InsertPays 72, 'E-Wallet',   '2025-11-29',  34, 23;
-EXEC sp_InsertPays 73, 'Cash',       '2025-11-29',  10, 23;
-EXEC sp_InsertPays 74, 'Debit',      '2025-11-29',  59, 23;
-EXEC sp_InsertPays 75, 'Credit',     '2025-11-29',  95, 23;
-EXEC sp_InsertPays 76, 'E-Wallet',   '2025-11-29',  48, 23;
-EXEC sp_InsertPays 77, 'Cash',       '2025-11-29',  22, 23;
-EXEC sp_InsertPays 78, 'Debit',      '2025-11-29',  66, 23;
-EXEC sp_InsertPays 79, 'Credit',     '2025-11-29',  30, 23;
-EXEC sp_InsertPays 80, 'E-Wallet',   '2025-11-29',  11, 23;
-
-EXEC sp_InsertPays 81, 'Cash',       '2025-11-30',  14, 24;
-EXEC sp_InsertPays 82, 'Debit',      '2025-11-30',  79, 24;
-EXEC sp_InsertPays 83, 'Credit',     '2025-11-30',  41, 24;
-EXEC sp_InsertPays 84, 'E-Wallet',   '2025-11-30',  57, 24;
-EXEC sp_InsertPays 85, 'Cash',       '2025-11-30',  36, 24;
-EXEC sp_InsertPays 86, 'Debit',      '2025-11-30',  69, 24;
-EXEC sp_InsertPays 87, 'Credit',     '2025-11-30',  24, 24;
-EXEC sp_InsertPays 88, 'E-Wallet',   '2025-11-30',  63, 24;
-EXEC sp_InsertPays 89, 'Cash',       '2025-11-30',  12, 24;
-EXEC sp_InsertPays 90, 'Debit',      '2025-11-30',  85, 24;
-
-EXEC sp_InsertPays 91, 'Credit',     '2025-12-01',  33, 25;
-EXEC sp_InsertPays 92, 'E-Wallet',   '2025-12-01',  70, 25;
-EXEC sp_InsertPays 93, 'Cash',       '2025-12-01',  5, 25;
-EXEC sp_InsertPays 94, 'Debit',      '2025-12-01',  90, 25;
-EXEC sp_InsertPays 95, 'Credit',     '2025-12-01',  48, 25;
-EXEC sp_InsertPays 96, 'E-Wallet',   '2025-12-01',  17, 25;
-EXEC sp_InsertPays 97, 'Cash',       '2025-12-01',  61, 25;
-EXEC sp_InsertPays 98, 'Debit',      '2025-12-01',  39, 25;
-EXEC sp_InsertPays 99, 'Credit',     '2025-12-01',  27, 25;
-EXEC sp_InsertPays 100,'E-Wallet',   '2025-12-01',  72, 25;
-
-EXEC sp_InsertPays 101,'Cash',       '2025-12-02',  54, 21;
-EXEC sp_InsertPays 102,'Debit',      '2025-12-02',  11, 21;
-EXEC sp_InsertPays 103,'Credit',     '2025-12-02',  83, 21;
-EXEC sp_InsertPays 104,'E-Wallet',   '2025-12-02',  38, 21;
-EXEC sp_InsertPays 105,'Cash',       '2025-12-02',  65, 21;
-EXEC sp_InsertPays 106,'Debit',      '2025-12-02',  22, 21;
-EXEC sp_InsertPays 107,'Credit',     '2025-12-02',  7, 21;
-EXEC sp_InsertPays 108,'E-Wallet',   '2025-12-02',  44, 21;
-EXEC sp_InsertPays 109,'Cash',       '2025-12-02',  92, 21;
-EXEC sp_InsertPays 110,'Debit',      '2025-12-02',  30, 21;
 
 -- Transact
-EXEC sp_InsertTransact 1, 21, 37, 1, 1, '2025-11-22';
-EXEC sp_InsertTransact 2, 21, 5, 2, 1, '2025-11-22';
-EXEC sp_InsertTransact 3, 21, 92, 3, 1, '2025-11-22';
-EXEC sp_InsertTransact 4, 21, 11, 4, 1, '2025-11-22';
-EXEC sp_InsertTransact 5, 21, 71, 5, 1, '2025-11-22';
-EXEC sp_InsertTransact 6, 21, 64, 6, 1, '2025-11-22';
-EXEC sp_InsertTransact 7, 21, 88, 7, 1, '2025-11-22';
-EXEC sp_InsertTransact 8, 21, 23, 8, 1, '2025-11-22';
-EXEC sp_InsertTransact 9, 21, 49, 9, 1, '2025-11-22';
-EXEC sp_InsertTransact 10, 21, 13, 10, 1, '2025-11-22';
-
-EXEC sp_InsertTransact 11, 22, 55, 11, 1, '2025-11-23';
-EXEC sp_InsertTransact 12, 22, 6, 12, 1, '2025-11-23';
-EXEC sp_InsertTransact 13, 22, 78, 13, 1, '2025-11-23';
-EXEC sp_InsertTransact 14, 22, 34, 14, 1, '2025-11-23';
-EXEC sp_InsertTransact 15, 22, 19, 15, 1, '2025-11-23';
-EXEC sp_InsertTransact 16, 22, 82, 16, 1, '2025-11-23';
-EXEC sp_InsertTransact 17, 22, 12, 17, 1, '2025-11-23';
-EXEC sp_InsertTransact 18, 22, 47, 18, 1, '2025-11-23';
-EXEC sp_InsertTransact 19, 22, 91, 19, 1, '2025-11-23';
-EXEC sp_InsertTransact 20, 22, 38, 20, 1, '2025-11-23';
-
-EXEC sp_InsertTransact 21, 23, 25, 21, 1, '2025-11-24';
-EXEC sp_InsertTransact 22, 23, 63, 22, 1, '2025-11-24';
-EXEC sp_InsertTransact 23, 23, 84, 23, 1, '2025-11-24';
-EXEC sp_InsertTransact 24, 23, 10, 24, 1, '2025-11-24';
-EXEC sp_InsertTransact 25, 23, 56, 25, 1, '2025-11-24';
-EXEC sp_InsertTransact 26, 23, 2, 26, 1, '2025-11-24';
-EXEC sp_InsertTransact 27, 23, 90, 27, 1, '2025-11-24';
-EXEC sp_InsertTransact 28, 23, 43, 28, 1, '2025-11-24';
-EXEC sp_InsertTransact 29, 23, 7, 29, 1, '2025-11-24';
-EXEC sp_InsertTransact 30, 23, 68, 30, 1, '2025-11-24';
-
-EXEC sp_InsertTransact 31, 24, 17, 31, 1, '2025-11-25';
-EXEC sp_InsertTransact 32, 24, 50, 32, 1, '2025-11-25';
-EXEC sp_InsertTransact 33, 24, 36, 33, 1, '2025-11-25';
-EXEC sp_InsertTransact 34, 24, 85, 34, 1, '2025-11-25';
-EXEC sp_InsertTransact 35, 24, 61, 35, 1, '2025-11-25';
-EXEC sp_InsertTransact 36, 24, 14, 36, 1, '2025-11-25';
-EXEC sp_InsertTransact 37, 24, 97, 37, 1, '2025-11-25';
-EXEC sp_InsertTransact 38, 24, 8, 38, 1, '2025-11-25';
-EXEC sp_InsertTransact 39, 24, 31, 39, 1, '2025-11-25';
-EXEC sp_InsertTransact 40, 24, 66, 40, 1, '2025-11-25';
-
-EXEC sp_InsertTransact 41, 25, 9, 41, 1, '2025-11-26';
-EXEC sp_InsertTransact 42, 25, 44, 42, 1, '2025-11-26';
-EXEC sp_InsertTransact 43, 25, 76, 43, 1, '2025-11-26';
-EXEC sp_InsertTransact 44, 25, 12, 44, 1, '2025-11-26';
-EXEC sp_InsertTransact 45, 25, 53, 45, 1, '2025-11-26';
-EXEC sp_InsertTransact 46, 25, 30, 46, 1, '2025-11-26';
-EXEC sp_InsertTransact 47, 25, 81, 47, 1, '2025-11-26';
-EXEC sp_InsertTransact 48, 25, 19, 48, 1, '2025-11-26';
-EXEC sp_InsertTransact 49, 25, 64, 49, 1, '2025-11-26';
-EXEC sp_InsertTransact 50, 25, 27, 50, 1, '2025-11-26';
-
-EXEC sp_InsertTransact 51, 21, 11, 51, 1, '2025-11-27';
-EXEC sp_InsertTransact 52, 21, 73, 52, 1, '2025-11-27';
-EXEC sp_InsertTransact 53, 21, 39, 53, 1, '2025-11-27';
-EXEC sp_InsertTransact 54, 21, 92, 54, 1, '2025-11-27';
-EXEC sp_InsertTransact 55, 21, 5, 55, 1, '2025-11-27';
-EXEC sp_InsertTransact 56, 21, 48, 56, 1, '2025-11-27';
-EXEC sp_InsertTransact 57, 21, 22, 57, 1, '2025-11-27';
-EXEC sp_InsertTransact 58, 21, 60, 58, 1, '2025-11-27';
-EXEC sp_InsertTransact 59, 21, 14, 59, 1, '2025-11-27';
-EXEC sp_InsertTransact 60, 21, 87, 60, 1, '2025-11-27';
-
-EXEC sp_InsertTransact 61, 22, 17, 61, 1, '2025-11-28';
-EXEC sp_InsertTransact 62, 22, 82, 62, 1, '2025-11-28';
-EXEC sp_InsertTransact 63, 22, 41, 63, 1, '2025-11-28';
-EXEC sp_InsertTransact 64, 22, 56, 64, 1, '2025-11-28';
-EXEC sp_InsertTransact 65, 22, 93, 65, 1, '2025-11-28';
-EXEC sp_InsertTransact 66, 22, 8, 66, 1, '2025-11-28';
-EXEC sp_InsertTransact 67, 22, 27, 67, 1, '2025-11-28';
-EXEC sp_InsertTransact 68, 22, 64, 68, 1, '2025-11-28';
-EXEC sp_InsertTransact 69, 22, 39, 69, 1, '2025-11-28';
-EXEC sp_InsertTransact 70, 22, 5, 70, 1, '2025-11-28';
-
-EXEC sp_InsertTransact 71, 23, 77, 71, 1, '2025-11-29';
-EXEC sp_InsertTransact 72, 23, 22, 72, 1, '2025-11-29';
-EXEC sp_InsertTransact 73, 23, 88, 73, 1, '2025-11-29';
-EXEC sp_InsertTransact 74, 23, 46, 74, 1, '2025-11-29';
-EXEC sp_InsertTransact 75, 23, 61, 75, 1, '2025-11-29';
-EXEC sp_InsertTransact 76, 23, 13, 76, 1, '2025-11-29';
-EXEC sp_InsertTransact 77, 23, 97, 77, 1, '2025-11-29';
-EXEC sp_InsertTransact 78, 23, 34, 78, 1, '2025-11-29';
-EXEC sp_InsertTransact 79, 23, 50, 79, 1, '2025-11-29';
-EXEC sp_InsertTransact 80, 23, 6, 80, 1, '2025-11-29';
-
-EXEC sp_InsertTransact 81, 24, 15, 81, 1, '2025-11-30';
-EXEC sp_InsertTransact 82, 24, 44, 82, 1, '2025-11-30';
-EXEC sp_InsertTransact 83, 24, 91, 83, 1, '2025-11-30';
-EXEC sp_InsertTransact 84, 24, 7, 84, 1, '2025-11-30';
-EXEC sp_InsertTransact 85, 24, 69, 85, 1, '2025-11-30';
-EXEC sp_InsertTransact 86, 24, 28, 86, 1, '2025-11-30';
-EXEC sp_InsertTransact 87, 24, 38, 87, 1, '2025-11-30';
-EXEC sp_InsertTransact 88, 24, 52, 88, 1, '2025-11-30';
-EXEC sp_InsertTransact 89, 24, 12, 89, 1, '2025-11-30';
-EXEC sp_InsertTransact 90, 24, 63, 90, 1, '2025-11-30';
-
-EXEC sp_InsertTransact 91, 25, 81, 91, 1, '2025-12-01';
-EXEC sp_InsertTransact 92, 25, 36, 92, 1, '2025-12-01';
-EXEC sp_InsertTransact 93, 25, 17, 93, 1, '2025-12-01';
-EXEC sp_InsertTransact 94, 25, 62, 94, 1, '2025-12-01';
-EXEC sp_InsertTransact 95, 25, 9, 95, 1, '2025-12-01';
-EXEC sp_InsertTransact 96, 25, 73, 96, 1, '2025-12-01';
-EXEC sp_InsertTransact 97, 25, 55, 97, 1, '2025-12-01';
-EXEC sp_InsertTransact 98, 25, 21, 98, 1, '2025-12-01';
-EXEC sp_InsertTransact 99, 25, 49, 99, 1, '2025-12-01';
-EXEC sp_InsertTransact 100, 25, 14, 100, 1, '2025-12-01';
-
-EXEC sp_InsertTransact 101, 21, 32, 101, 1, '2025-12-02';
-EXEC sp_InsertTransact 102, 21, 74, 102, 1, '2025-12-02';
-EXEC sp_InsertTransact 103, 21, 8, 103, 1, '2025-12-02';
-EXEC sp_InsertTransact 104, 21, 59, 104, 1, '2025-12-02';
-EXEC sp_InsertTransact 105, 21, 90, 105, 1, '2025-12-02';
-EXEC sp_InsertTransact 106, 21, 41, 106, 1, '2025-12-02';
-EXEC sp_InsertTransact 107, 21, 18, 107, 1, '2025-12-02';
-EXEC sp_InsertTransact 108, 21, 65, 108, 1, '2025-12-02';
-EXEC sp_InsertTransact 109, 21, 27, 109, 1, '2025-12-02';
-EXEC sp_InsertTransact 110, 21, 50, 110, 1, '2025-12-02';
+INSERT INTO TRANSACT (transact_id, cust_id, staff_id, product_id, schedule, status)
+VALUES
+(1, 1, 21, 37, '2025-11-22', 1),
+(2, 2, 21, 5,  '2025-11-22', 1),
+(3, 3, 21, 92, '2025-11-22', 1),
+(4, 4, 21, 11, '2025-11-22', 1),
+(5, 5, 21, 71, '2025-11-22', 1),
+(6, 6, 21, 64, '2025-11-22', 1),
+(7, 7, 21, 88, '2025-11-22', 1),
+(8, 8, 21, 23, '2025-11-22', 1),
+(9, 9, 21, 49, '2025-11-22', 1),
+(10, 10, 21, 13, '2025-11-22', 1),
+(11, 11, 22, 55, '2025-11-23', 1),
+(12, 12, 22, 6,  '2025-11-23', 1),
+(13, 13, 22, 78, '2025-11-23', 1),
+(14, 14, 22, 34, '2025-11-23', 1),
+(15, 15, 22, 19, '2025-11-23', 1),
+(16, 16, 22, 82, '2025-11-23', 1),
+(17, 17, 22, 12, '2025-11-23', 1),
+(18, 18, 22, 47, '2025-11-23', 1),
+(19, 19, 22, 91, '2025-11-23', 1),
+(20, 20, 22, 38, '2025-11-23', 1),
+(21, 21, 23, 25, '2025-11-24', 1),
+(22, 22, 23, 63, '2025-11-24', 1),
+(23, 23, 23, 84, '2025-11-24', 1),
+(24, 24, 23, 10, '2025-11-24', 1),
+(25, 25, 23, 56, '2025-11-24', 1),
+(26, 26, 23, 2,  '2025-11-24', 1),
+(27, 27, 23, 90, '2025-11-24', 1),
+(28, 28, 23, 43, '2025-11-24', 1),
+(29, 29, 23, 7,  '2025-11-24', 1),
+(30, 30, 23, 68, '2025-11-24', 1),
+(31, 31, 24, 17, '2025-11-25', 1),
+(32, 32, 24, 50, '2025-11-25', 1),
+(33, 33, 24, 36, '2025-11-25', 1),
+(34, 34, 24, 85, '2025-11-25', 1),
+(35, 35, 24, 61, '2025-11-25', 1),
+(36, 36, 24, 14, '2025-11-25', 1),
+(37, 37, 24, 97, '2025-11-25', 1),
+(38, 38, 24, 8,  '2025-11-25', 1),
+(39, 39, 24, 31, '2025-11-25', 1),
+(40, 40, 24, 66, '2025-11-25', 1),
+(41, 41, 25, 9,  '2025-11-26', 1),
+(42, 42, 25, 44, '2025-11-26', 1),
+(43, 43, 25, 76, '2025-11-26', 1),
+(44, 44, 25, 12, '2025-11-26', 1),
+(45, 45, 25, 53, '2025-11-26', 1),
+(46, 46, 25, 30, '2025-11-26', 1),
+(47, 47, 25, 81, '2025-11-26', 1),
+(48, 48, 25, 19, '2025-11-26', 1),
+(49, 49, 25, 64, '2025-11-26', 1),
+(50, 50, 25, 27, '2025-11-26', 1),
+(51, 51, 21, 11, '2025-11-27', 1),
+(52, 52, 21, 73, '2025-11-27', 1),
+(53, 53, 21, 39, '2025-11-27', 1),
+(54, 54, 21, 92, '2025-11-27', 1),
+(55, 55, 21, 5,  '2025-11-27', 1),
+(56, 56, 21, 48, '2025-11-27', 1),
+(57, 57, 21, 22, '2025-11-27', 1),
+(58, 58, 21, 60, '2025-11-27', 1),
+(59, 59, 21, 14, '2025-11-27', 1),
+(60, 60, 21, 87, '2025-11-27', 1),
+(61, 61, 22, 17, '2025-11-28', 1),
+(62, 62, 22, 82, '2025-11-28', 1),
+(63, 63, 22, 41, '2025-11-28', 1),
+(64, 64, 22, 56, '2025-11-28', 1),
+(65, 65, 22, 93, '2025-11-28', 1),
+(66, 66, 22, 8,  '2025-11-28', 1),
+(67, 67, 22, 27, '2025-11-28', 1),
+(68, 68, 22, 64, '2025-11-28', 1),
+(69, 69, 22, 39, '2025-11-28', 1),
+(70, 70, 22, 5,  '2025-11-28', 1),
+(71, 71, 23, 77, '2025-11-29', 1),
+(72, 72, 23, 22, '2025-11-29', 1),
+(73, 73, 23, 88, '2025-11-29', 1),
+(74, 74, 23, 46, '2025-11-29', 1),
+(75, 75, 23, 61, '2025-11-29', 1),
+(76, 76, 23, 13, '2025-11-29', 1),
+(77, 77, 23, 97, '2025-11-29', 1),
+(78, 78, 23, 34, '2025-11-29', 1),
+(79, 79, 23, 50, '2025-11-29', 1),
+(80, 80, 23, 6,  '2025-11-29', 1),
+(81, 81, 24, 15, '2025-11-30', 1),
+(82, 82, 24, 44, '2025-11-30', 1),
+(83, 83, 24, 91, '2025-11-30', 1),
+(84, 84, 24, 7,  '2025-11-30', 1),
+(85, 85, 24, 69, '2025-11-30', 1),
+(86, 86, 24, 28, '2025-11-30', 1),
+(87, 87, 24, 38, '2025-11-30', 1),
+(88, 88, 24, 52, '2025-11-30', 1),
+(89, 89, 24, 12, '2025-11-30', 1),
+(90, 90, 24, 63, '2025-11-30', 1),
+(91, 91, 25, 81, '2025-12-01', 1),
+(92, 92, 25, 36, '2025-12-01', 1),
+(93, 93, 25, 17, '2025-12-01', 1),
+(94, 94, 25, 62, '2025-12-01', 1),
+(95, 95, 25, 9,  '2025-12-01', 1),
+(96, 96, 25, 73, '2025-12-01', 1),
+(97, 97, 25, 55, '2025-12-01', 1),
+(98, 98, 25, 21, '2025-12-01', 1),
+(99, 99, 25, 49, '2025-12-01', 1),
+(100, 100, 25, 14, '2025-12-01', 1),
+(101, 1, 21, 32, '2025-12-02', 1),
+(102, 2, 21, 74, '2025-12-02', 1),
+(103, 3, 21, 8,  '2025-12-02', 1),
+(104, 4, 21, 59, '2025-12-02', 1),
+(105, 5, 21, 90, '2025-12-02', 1),
+(106, 6, 21, 41, '2025-12-02', 1),
+(107, 7, 21, 18, '2025-12-02', 1),
+(108, 8, 21, 65, '2025-12-02', 1),
+(109, 9, 21, 27, '2025-12-02', 1),
+(110, 10, 21, 50, '2025-12-02', 1);
