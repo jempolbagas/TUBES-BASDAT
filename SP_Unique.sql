@@ -44,7 +44,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
     BEGIN TRANSACTION;
-    BEGIN 
+    BEGIN TRY
         IF NOT EXISTS (
             SELECT 1 FROM STAFF_ATTENDANCE 
             WHERE staff_id = @vet_id 

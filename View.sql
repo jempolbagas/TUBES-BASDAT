@@ -46,7 +46,7 @@ JOIN STAFF s ON s.id = v.staff_id
 JOIN PET p ON p.id = t.pet_id
 LEFT JOIN DRUG d ON d.id = t.drug_id
 WHERE CAST(t.schedule AS DATE) = CAST(GETDATE() AS DATE);
-
+GO
 -- Execution
 SELECT * FROM view_TotalBill;
 SELECT * FROM view_TotalBill WHERE customer_id = 3;

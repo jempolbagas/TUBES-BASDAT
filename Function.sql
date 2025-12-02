@@ -89,6 +89,7 @@ BEGIN
 
     RETURN ISNULL(@total, 0);
 END;
+GO
 
 -- Execution
 SELECT dbo.fn_PetAge(3) AS pet_age;

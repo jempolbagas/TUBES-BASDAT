@@ -1,4 +1,4 @@
-USE Petshop;
+USE PetShop;
 GO
 
 -- INSERT DATA menggunakan SP
