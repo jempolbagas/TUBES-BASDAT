@@ -11,12 +11,11 @@ END
 
 GO
 CREATE PROCEDURE sp_DeleteCustContact
-    @cust_contact VARCHAR(50),
-    @cust_id INT
+    @cust_contact VARCHAR(50)
 AS
 BEGIN
     DELETE FROM CUST_CONTACT
-    WHERE cust_contact = @cust_contact AND cust_id = @cust_id;
+    WHERE cust_contact = @cust_contact;
 END
 
 GO
@@ -48,12 +47,11 @@ END
 
 GO
 CREATE PROCEDURE sp_DeleteStaffAttendance
-    @attendance_id INT,
-    @staff_id INT
+    @attendance_id INT
 AS
 BEGIN
     DELETE FROM STAFF_ATTENDANCE
-    WHERE @attendance_id = @attendance_id AND staff_id = @staff_id;
+    WHERE attendance_id = @attendance_id;
 END
 
 GO
@@ -103,88 +101,54 @@ END
 
 GO
 CREATE PROCEDURE sp_DeletePays
-    @payment_id INT,
-    @cust_id INT,
-    @staff_id INT
+    @payment_id INT
 AS
 BEGIN
     DELETE FROM PAYS
-    WHERE payment_id = @payment_id
-        AND cust_id = @cust_id
-        AND staff_id = @staff_id;
+    WHERE payment_id = @payment_id;
 END
 
 GO
 CREATE PROCEDURE sp_DeleteTransact
-    @transact_id INT,
-    @cust_id INT,
-    @staff_id INT,
-    @product_id INT
+    @transact_id INT
 AS
 BEGIN
     DELETE FROM TRANSACT
-    WHERE transact_id = @transact_id
-        AND cust_id = @cust_id
-        AND staff_id = @staff_id
-        AND product_id = @product_id;
+    WHERE transact_id = @transact_id;
 END
 
 GO
 CREATE PROCEDURE sp_DeleteTreatment
-    @treatment_id INT,
-    @drug_id INT,
-    @pet_id INT,
-    @staff_id INT
+    @treatment_id INT
 AS
 BEGIN
     DELETE FROM TREATMENT
-    WHERE treatment_id = @treatment_id
-        AND drug_id = @drug_id
-        AND pet_id = @pet_id
-        AND staff_id = @staff_id;
+    WHERE treatment_id = @treatment_id;
 END
 
 GO
 CREATE PROCEDURE sp_DeleteTreatmentServices
-    @treatment_id INT,
-    @drug_id INT,
-    @pet_id INT,
-    @staff_id INT,
-    @type VARCHAR(100)
+    @treatment_id INT
 AS
 BEGIN
     DELETE FROM TREATMENT_SERVICES
-    WHERE treatment_id = @treatment_id
-        AND drug_id = @drug_id
-        AND pet_id = @pet_id
-        AND staff_id = @staff_id
-        AND [type] = @type;
+    WHERE treatment_id = @treatment_id;
 END
 
 GO
 CREATE PROCEDURE sp_DeleteServes
-    @serves_id INT,
-    @pet_id INT,
-    @staff_id INT
+    @serves_id INT
 AS
 BEGIN
     DELETE FROM SERVES
-    WHERE serves_id = @serves_id
-        AND pet_id = @pet_id
-        AND staff_id = @staff_id;
+    WHERE serves_id = @serves_id;
 END
 
 GO
 CREATE PROCEDURE sp_DeleteServesServices
-    @serves_id INT,
-    @pet_id INT,
-    @staff_id INT,
-    @type VARCHAR(100)
+    @serves_id INT
 AS
 BEGIN
     DELETE FROM SERVES_SERVICES
-    WHERE serves_id = @serves_id
-        AND pet_id = @pet_id
-        AND staff_id = @staff_id
-        AND [type] = @type;
+    WHERE serves_id = @serves_id;
 END

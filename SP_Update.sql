@@ -13,13 +13,15 @@ END
 
 GO
 CREATE PROCEDURE sp_UpdateCustContact
+    @cust_id INT,
     @cust_contact VARCHAR(50),
-    @cust_id INT
+    @new_cust_contact VARCHAR(50)
 AS
 BEGIN
     UPDATE CUST_CONTACT
-    SET cust_id = @cust_id
-    WHERE cust_contact = @cust_contact;
+    SET cust_contact = @new_cust_contact
+    WHERE cust_id = @cust_id
+        AND cust_contact = @cust_contact;
 END
 
 GO

@@ -194,7 +194,7 @@ BEGIN
 END
 
 GO
-ALTER PROCEDURE sp_InsertTransact
+CREATE PROCEDURE sp_InsertTransact
     @transact_id INT,
     @cust_id INT,
     @staff_id INT,
