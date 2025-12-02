@@ -4,7 +4,6 @@ GO
 -- =============================================
 -- 1. sp_RegisterNewCustomerWithPet
 -- Description: Streamlines onboarding by adding Customer, Contact, and Pet in one transaction.
--- Requirement: Unique SP + TCL (COMMIT/ROLLBACK)
 -- =============================================
 CREATE PROCEDURE sp_RegisterNewCustomerWithPet
     -- Customer Info
@@ -46,7 +45,6 @@ GO
 -- =============================================
 -- 2. sp_RescheduleTreatment
 -- Description: Reschedules a vet appointment while ensuring the vet is working and not double-booked.
--- Requirement: Unique SP + TCL (COMMIT/ROLLBACK)
 -- =============================================
 CREATE PROCEDURE sp_RescheduleTreatment
     @treatment_id INT,
@@ -97,7 +95,6 @@ GO
 -- =============================================
 -- 3. sp_ApplySeasonalProductDiscount
 -- Description: Applies a percentage discount to a category of products (by name) in bulk.
--- Requirement: Unique SP + TCL (COMMIT/ROLLBACK)
 -- =============================================
 CREATE PROCEDURE sp_ApplySeasonalProductDiscount
     @partial_name VARCHAR(50), -- e.g., 'Whiskas'
@@ -129,8 +126,7 @@ GO
 
 -- =============================================
 -- 4. sp_GetStaffPerformanceReport
--- Description: Generates a report of staff activity (transactions, treatments, or care services) for payroll/bonus calculation.
--- Requirement: Unique SP (Reporting)
+-- Description: Generates a report of staff activity (transactions, treatments, or care services)
 -- =============================================
 CREATE PROCEDURE sp_GetStaffPerformanceReport
     @start_date DATE,
