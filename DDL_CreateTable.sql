@@ -33,7 +33,7 @@ CREATE TABLE STAFF (
 );
 
 CREATE TABLE STAFF_ATTENDANCE (
-    attendance_id INT,
+    attendance_id INT IDENTITY(1,1),
     staff_id INT,
     [login] DATETIME,
     logout DATETIME,
