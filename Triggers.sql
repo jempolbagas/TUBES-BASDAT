@@ -22,28 +22,16 @@ BEGIN
 END;
 
 GO
-CREATE TRIGGER trg_ValidateTreatmentInsert
+ALTER TRIGGER trg_ValidateTreatmentInsert
 ON TREATMENT
 INSTEAD OF INSERT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    IF EXISTS (SELECT 1 FROM inserted WHERE schedule < GETDATE())
+    IF EXISTS (SELECT 1 FROM inserted WHERE CAST(schedule AS date) < CAST(GETDATE() AS date))
     BEGIN
         RAISERROR('Input Failed: Cannot schedule a treatment in the past.', 16, 1);
-        ROLLBACK TRANSACTION;
-        RETURN;
-    END
-
-    IF EXISTS (
-        SELECT 1 
-        FROM TREATMENT t
-        JOIN inserted i ON t.staff_id = i.staff_id 
-        WHERE t.schedule = i.schedule -- Asumsi durasi per slot waktu sama persis
-    )
-    BEGIN
-        RAISERROR('Input Failed: Vet already has a treatment scheduled at that time.', 16, 1);
         ROLLBACK TRANSACTION;
         RETURN;
     END
