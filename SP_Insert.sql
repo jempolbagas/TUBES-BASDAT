@@ -76,7 +76,6 @@ AS
 BEGIN
     INSERT INTO STAFF (id, [name], [address]) VALUES (@staff_id, @name, @address);
     INSERT INTO CASHIER (staff_id, training_id) VALUES (@staff_id, @training_id);
-    COMMIT;
 END
 
 GO
@@ -87,7 +86,6 @@ CREATE PROCEDURE sp_InsertStaffAttendance
 AS
 BEGIN
     INSERT INTO STAFF_ATTENDANCE ([login], logout, staff_id) VALUES (@login, @logout, @staff_id);
-    COMMIT;
 END
 
 GO
@@ -117,7 +115,7 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE sp_InsertTreatment
+ALTER PROCEDURE sp_InsertTreatment
     @treatment_id INT,
     @schedule DATETIME,
     @drug_id INT,
@@ -152,6 +150,19 @@ BEGIN
 END
 
 GO
+ALTER PROCEDURE sp_InsertTreatment
+    @treatment_id INT,
+    @schedule DATETIME,
+    @drug_id INT,
+    @pet_id INT,
+    @vet_id INT
+AS
+BEGIN
+    INSERT INTO TREATMENT (treatment_id, schedule, drug_id, pet_id, staff_id) 
+    VALUES (@treatment_id, @schedule, @drug_id, @pet_id, @vet_id);
+END
+
+GO
 CREATE PROCEDURE sp_InsertTreatmentService
     @treatment_id INT,
     @type VARCHAR(100),
@@ -163,7 +174,7 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE sp_InsertServes
+ALTER PROCEDURE sp_InsertServes
     @serves_id INT,
     @schedule DATETIME,
     @pet_id INT,
@@ -197,6 +208,18 @@ BEGIN
 END
 
 GO
+ALTER PROCEDURE sp_InsertServes
+    @serves_id INT,
+    @schedule DATETIME,
+    @pet_id INT,
+    @staff_id INT
+AS
+BEGIN
+    INSERT INTO SERVES (serves_id, schedule, pet_id, staff_id) 
+    VALUES (@serves_id, @schedule, @pet_id, @staff_id);
+END
+
+GO
 CREATE PROCEDURE sp_InsertServesService
     @serves_id INT,
     @type VARCHAR(100),
@@ -221,7 +244,7 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE sp_InsertTransact
+ALTER PROCEDURE sp_InsertTransact
     @cust_id INT,
     @staff_id INT,
     @product_id INT
@@ -261,4 +284,15 @@ BEGIN
     BEGIN CATCH
         ROLLBACK TRANSACTION;
     END CATCH
+END;
+
+GO
+ALTER PROCEDURE sp_InsertTransact
+    @cust_id INT,
+    @staff_id INT,
+    @product_id INT
+AS
+BEGIN
+    INSERT INTO TRANSACT (cust_id, staff_id, product_id) 
+    VALUES (@cust_id, @staff_id, @product_id);
 END;

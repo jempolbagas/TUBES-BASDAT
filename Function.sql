@@ -26,47 +26,48 @@ BEGIN
 END;
 
 GO
-CREATE FUNCTION GetTotalTransact(
-    @cust_id INT,
-    @staff_id INT,
-    @product_id INT
-)
+CREATE FUNCTION GetTotalTransact(@cust_id INT)
 RETURNS DECIMAL(10,2)
 AS
 BEGIN
     DECLARE @total DECIMAL(10,2);
 
-    SELECT @total = price
-    FROM [PRODUCT]
-    WHERE id = @product_id;
+    SELECT @total = SUM(p.price)
+    FROM TRANSACT t
+    JOIN [PRODUCT] p ON t.product_id = p.id
+    WHERE t.cust_id = @cust_id;
 
-    RETURN @total;
+    RETURN ISNULL(@total, 0);
 END;
 
 GO
-CREATE FUNCTION GetTotalTreatment(@treatment_id INT)
+CREATE FUNCTION GetTotalTreatment(@cust_id INT)
 RETURNS DECIMAL(10,2)
 AS
 BEGIN
     DECLARE @total DECIMAL(10,2);
 
-    SELECT @total = SUM(price)
-    FROM TREATMENT_SERVICES
-    WHERE treatment_id = @treatment_id;
+    SELECT @total = SUM(ts.price)
+    FROM PET p
+    JOIN TREATMENT t ON t.pet_id = pet_id
+    JOIN TREATMENT_SERVICES ts ON ts.treatment_id = t.treatment_id
+    WHERE p.cust_id = @cust_id;
 
-    RETURN @total;
+    RETURN ISNULL(@total, 0);
 END;
 
 GO
-CREATE FUNCTION GetTotalServes(@serves_id INT)
+CREATE FUNCTION GetTotalServes(@cust_id INT)
 RETURNS DECIMAL(10,2)
 AS
 BEGIN
     DECLARE @total DECIMAL(10,2);
 
-    SELECT @total = SUM(price)
-    FROM SERVES_SERVICES
-    WHERE serves_id = @serves_id;
+    SELECT @total = SUM(ss.price)
+    FROM PET p
+    JOIN SERVES s ON s.pet_id = p.id
+    JOIN SERVES_SERVICES ss ON ss.serves_id = s.serves_id
+    WHERE p.cust_id = @cust_id;
 
-    RETURN @total;
+    RETURN ISNULL(@total, 0);
 END;
