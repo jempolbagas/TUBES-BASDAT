@@ -65,7 +65,11 @@ FROM STAFF_ATTENDANCE sa
 RIGHT JOIN STAFF s
     ON s.id = sa.staff_id
     AND CAST(sa.[login] AS DATE) = CAST(GETDATE() AS DATE);
+<<<<<<< HEAD
 GO
+=======
+
+>>>>>>> e3cb16680b24b354183f77279586ec085e0f4ed9
 
 -- Execution
 SELECT * FROM view_TotalBill;
