@@ -41,16 +41,37 @@ SELECT
     d.[name] AS drug_used,
     t.[status] AS treatment_status
 FROM TREATMENT t
-JOIN VETERINARIAN v ON v.staff_id = t.staff_id
-JOIN STAFF s ON s.id = v.staff_id
-JOIN PET p ON p.id = t.pet_id
+INNER JOIN VETERINARIAN v ON v.staff_id = t.staff_id
+INNER JOIN STAFF s ON s.id = v.staff_id
+INNER JOIN PET p ON p.id = t.pet_id
 LEFT JOIN DRUG d ON d.id = t.drug_id
 WHERE CAST(t.schedule AS DATE) = CAST(GETDATE() AS DATE);
+
+-- View Staff Attendance Today
 GO
+CREATE VIEW view_StaffAttendanceToday
+AS
+SELECT
+    s.id AS staff_id,
+    s.[name] AS staff_name,
+    sa.attendance_id,
+    sa.[login],
+    sa.logout,
+    CASE 
+        WHEN sa.attendance_id IS NULL THEN 'Not Present'
+        ELSE 'Present'
+    END AS attendance_status
+FROM STAFF_ATTENDANCE sa
+RIGHT JOIN STAFF s
+    ON s.id = sa.staff_id
+    AND CAST(sa.[login] AS DATE) = CAST(GETDATE() AS DATE);
+
+
 -- Execution
 SELECT * FROM view_TotalBill;
 SELECT * FROM view_TotalBill WHERE customer_id = 3;
 SELECT * FROM view_TotalBill ORDER BY total_bill DESC;
 SELECT * FROM view_LowStockProducts;
 SELECT * FROM view_TodayVetSchedule;
-SELECT * FROM view_TodayVetSchedule WHERE vet_id = 3;
+SELECT * FROM view_TodayVetSchedule WHERE vet_id = 1;
+SELECT * FROM view_StaffAttendanceToday;

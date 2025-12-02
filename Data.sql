@@ -1,4 +1,4 @@
-USE PetShop;
+USE Petshop;
 GO
 
 -- INSERT DATA menggunakan SP
@@ -765,479 +765,487 @@ EXEC sp_InsertMedicalRecord 109, 'Parasite Infection', 'Anti-parasitic', '2025-1
 EXEC sp_InsertMedicalRecord 110, 'Fever', 'Antipyretic Injection', '2025-12-01', 10;
 
 -- Treatment
-INSERT INTO TREATMENT (treatment_id, drug_id, pet_id, staff_id, schedule, [status]) VALUES
-(1, 37, 1, 1, '2025-11-22', 1),
-(2, 84, 2, 1, '2025-11-22', 1),
-(3, 12, 3, 1, '2025-11-22', 1),
-(4, 65, 4, 1, '2025-11-22', 1),
-(5, 28, 5, 1, '2025-11-22', 1),
-(6, 91, 6, 1, '2025-11-22', 1),
-(7, 54, 7, 1, '2025-11-22', 1),
-(8, 7,  8, 1, '2025-11-22', 1),
-(9, 33, 9, 1, '2025-11-22', 1),
-(10,76,10, 1, '2025-11-22', 1),
+EXEC sp_InsertTreatment 1, 37, 1, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 2, 84, 2, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 3, 12, 3, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 4, 65, 4, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 5, 28, 5, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 6, 91, 6, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 7, 54, 7, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 8, 7,  8, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 9, 33, 9, 1, '2025-11-22', 1;
+EXEC sp_InsertTreatment 10, 76, 10, 1, '2025-11-22', 1;
 
-(11,19,11, 2, '2025-11-23', 1),
-(12,88,12, 2, '2025-11-23', 1),
-(13,46,13, 2, '2025-11-23', 1),
-(14, 3,14, 2, '2025-11-23', 1),
-(15,72,15, 2, '2025-11-23', 1),
-(16,59,16, 2, '2025-11-23', 1),
-(17, 6,17, 2, '2025-11-23', 1),
-(18,41,18, 2, '2025-11-23', 1),
-(19,97,19, 2, '2025-11-23', 1),
-(20,23,20, 2, '2025-11-23', 1),
+EXEC sp_InsertTreatment 11, 19, 11, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 12, 88, 12, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 13, 46, 13, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 14, 3,  14, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 15, 72, 15, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 16, 59, 16, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 17, 6,  17, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 18, 41, 18, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 19, 97, 19, 2, '2025-11-23', 1;
+EXEC sp_InsertTreatment 20, 23, 20, 2, '2025-11-23', 1;
 
-(21,50,21, 3, '2025-11-24', 1),
-(22,12,22, 3, '2025-11-24', 1),
-(23,81,23, 3, '2025-11-24', 1),
-(24,29,24, 3, '2025-11-24', 1),
-(25,74,25, 3, '2025-11-24', 1),
-(26,37,26, 3, '2025-11-24', 1),
-(27,90,27, 3, '2025-11-24', 1),
-(28,15,28, 3, '2025-11-24', 1),
-(29,68,29, 3, '2025-11-24', 1),
-(30, 5,30, 3, '2025-11-24', 1),
+EXEC sp_InsertTreatment 21, 50, 21, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 22, 12, 22, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 23, 81, 23, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 24, 29, 24, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 25, 74, 25, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 26, 37, 26, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 27, 90, 27, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 28, 15, 28, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 29, 68, 29, 3, '2025-11-24', 1;
+EXEC sp_InsertTreatment 30, 5,  30, 3, '2025-11-24', 1;
 
-(31,33,31, 4, '2025-11-25', 1),
-(32,80,32, 4, '2025-11-25', 1),
-(33,21,33, 4, '2025-11-25', 1),
-(34,56,34, 4, '2025-11-25', 1),
-(35,99,35, 4, '2025-11-25', 1),
-(36, 8,36, 4, '2025-11-25', 1),
-(37,44,37, 4, '2025-11-25', 1),
-(38,61,38, 4, '2025-11-25', 1),
-(39,13,39, 4, '2025-11-25', 1),
-(40,78,40, 4, '2025-11-25', 1),
+EXEC sp_InsertTreatment 31, 33, 31, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 32, 80, 32, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 33, 21, 33, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 34, 56, 34, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 35, 99, 35, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 36, 8,  36, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 37, 44, 37, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 38, 61, 38, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 39, 13, 39, 4, '2025-11-25', 1;
+EXEC sp_InsertTreatment 40, 78, 40, 4, '2025-11-25', 1;
 
-(41,27,41, 5, '2025-11-26', 1),
-(42,92,42, 5, '2025-11-26', 1),
-(43,35,43, 5, '2025-11-26', 1),
-(44,64,44, 5, '2025-11-26', 1),
-(45, 7,45, 5, '2025-11-26', 1),
-(46,53,46, 5, '2025-11-26', 1),
-(47,86,47, 5, '2025-11-26', 1),
-(48,16,48, 5, '2025-11-26', 1),
-(49,72,49, 5, '2025-11-26', 1),
-(50,38,50, 5, '2025-11-26', 1),
+EXEC sp_InsertTreatment 41, 27, 41, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 42, 92, 42, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 43, 35, 43, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 44, 64, 44, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 45, 7,  45, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 46, 53, 46, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 47, 86, 47, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 48, 16, 48, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 49, 72, 49, 5, '2025-11-26', 1;
+EXEC sp_InsertTreatment 50, 38, 50, 5, '2025-11-26', 1;
 
-(51,49,51, 6, '2025-11-27', 1),
-(52, 5,52, 6, '2025-11-27', 1),
-(53,90,53, 6, '2025-11-27', 1),
-(54,33,54, 6, '2025-11-27', 1),
-(55,18,55, 6, '2025-11-27', 1),
-(56,75,56, 6, '2025-11-27', 1),
-(57,61,57, 6, '2025-11-27', 1),
-(58,12,58, 6, '2025-11-27', 1),
-(59,87,59, 6, '2025-11-27', 1),
-(60,40,60, 6, '2025-11-27', 1),
+EXEC sp_InsertTreatment 51, 49, 51, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 52, 5,  52, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 53, 90, 53, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 54, 33, 54, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 55, 18, 55, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 56, 75, 56, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 57, 61, 57, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 58, 12, 58, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 59, 87, 59, 6, '2025-11-27', 1;
+EXEC sp_InsertTreatment 60, 40, 60, 6, '2025-11-27', 1;
 
-(61,14,61, 7, '2025-11-28', 1),
-(62,87,62, 7, '2025-11-28', 1),
-(63,45,63, 7, '2025-11-28', 1),
-(64,32,64, 7, '2025-11-28', 1),
-(65,68,65, 7, '2025-11-28', 1),
-(66, 5,66, 7, '2025-11-28', 1),
-(67,76,67, 7, '2025-11-28', 1),
-(68,22,68, 7, '2025-11-28', 1),
-(69,93,69, 7, '2025-11-28', 1),
-(70,38,70, 7, '2025-11-28', 1),
+EXEC sp_InsertTreatment 61, 14, 61, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 62, 87, 62, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 63, 45, 63, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 64, 32, 64, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 65, 68, 65, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 66, 5,  66, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 67, 76, 67, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 68, 22, 68, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 69, 93, 69, 7, '2025-11-28', 1;
+EXEC sp_InsertTreatment 70, 38, 70, 7, '2025-11-28', 1;
 
-(71,51,71, 8, '2025-11-29', 1),
-(72,19,72, 8, '2025-11-29', 1),
-(73,84,73, 8, '2025-11-29', 1),
-(74, 6,74, 8, '2025-11-29', 1),
-(75,77,75, 8, '2025-11-29', 1),
-(76,43,76, 8, '2025-11-29', 1),
-(77,28,77, 8, '2025-11-29', 1),
-(78,95,78, 8, '2025-11-29', 1),
-(79,12,79, 8, '2025-11-29', 1),
-(80,63,80, 8, '2025-11-29', 1),
+EXEC sp_InsertTreatment 71, 51, 71, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 72, 19, 72, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 73, 84, 73, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 74, 6,  74, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 75, 77, 75, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 76, 43, 76, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 77, 28, 77, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 78, 95, 78, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 79, 12, 79, 8, '2025-11-29', 1;
+EXEC sp_InsertTreatment 80, 63, 80, 8, '2025-11-29', 1;
 
-(81,41,81, 9, '2025-11-30', 1),
-(82,67,82, 9, '2025-11-30', 1),
-(83, 9,83, 9, '2025-11-30', 1),
-(84,74,84, 9, '2025-11-30', 1),
-(85,29,85, 9, '2025-11-30', 1),
-(86,82,86, 9, '2025-11-30', 1),
-(87,57,87, 9, '2025-11-30', 1),
-(88,20,88, 9, '2025-11-30', 1),
-(89,95,89, 9, '2025-11-30', 1),
-(90,36,90, 9, '2025-11-30', 1),
+EXEC sp_InsertTreatment 81, 41, 81, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 82, 67, 82, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 83, 9,  83, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 84, 74, 84, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 85, 29, 85, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 86, 82, 86, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 87, 57, 87, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 88, 20, 88, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 89, 95, 89, 9, '2025-11-30', 1;
+EXEC sp_InsertTreatment 90, 36, 90, 9, '2025-11-30', 1;
 
-(91,13,91,10, '2025-12-01', 1),
-(92,88,92,10, '2025-12-01', 1),
-(93,60,93,10, '2025-12-01', 1),
-(94,44,94,10, '2025-12-01', 1),
-(95,73,95,10, '2025-12-01', 1),
-(96,25,96,10, '2025-12-01', 1),
-(97,97,97,10, '2025-12-01', 1),
-(98,31,98,10, '2025-12-01', 1),
-(99,54,99,10, '2025-12-01', 1),
-(100,18,100,10,'2025-12-01', 1),
+EXEC sp_InsertTreatment 91, 13, 91, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 92, 88, 92, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 93, 60, 93, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 94, 44, 94, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 95, 73, 95, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 96, 25, 96, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 97, 97, 97, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 98, 31, 98, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 99, 54, 99, 10, '2025-12-01', 1;
+EXEC sp_InsertTreatment 100, 18, 100, 10, '2025-12-01', 1;
 
-(101,85, 1, 1, '2025-12-02', 0),
-(102,47, 2, 1, '2025-12-02', 1),
-(103,29, 3, 1, '2025-12-02', 0),
-(104,91, 4, 1, '2025-12-02', 0),
-(105, 7, 5, 1, '2025-12-02', 1),
-(106,62, 6, 1, '2025-12-02', 1),
-(107,36, 7, 1, '2025-12-02', 1),
-(108,55, 8, 1, '2025-12-02', 0),
-(109,13, 9, 1, '2025-12-02', 1),
-(110,98,10, 1, '2025-12-02', 0);
+EXEC sp_InsertTreatment 101, 85, 1, 1, '2025-12-02', 0;
+EXEC sp_InsertTreatment 102, 47, 2, 1, '2025-12-02', 1;
+EXEC sp_InsertTreatment 103, 29, 3, 1, '2025-12-02', 0;
+EXEC sp_InsertTreatment 104, 91, 4, 1, '2025-12-02', 0;
+EXEC sp_InsertTreatment 105, 7,  5, 1, '2025-12-02', 1;
+EXEC sp_InsertTreatment 106, 62, 6, 1, '2025-12-02', 1;
+EXEC sp_InsertTreatment 107, 36, 7, 1, '2025-12-02', 1;
+EXEC sp_InsertTreatment 108, 55, 8, 1, '2025-12-02', 0;
+EXEC sp_InsertTreatment 109, 13, 9, 1, '2025-12-02', 1;
+EXEC sp_InsertTreatment 110, 98, 10, 1, '2025-12-02', 0;
 
 
 
 -- Treatment Service
-INSERT INTO TREATMENT_SERVICES (treatment_id, drug_id, pet_id, staff_id, [type], price) VALUES
-(1, 37, 1, 1, 'Checkup', 150.00),
-(2, 84, 2, 1, 'Vaccination', 200.00),
-(3, 12, 3, 1, 'Medication', 100.00),
-(4, 65, 4, 1, 'Grooming', 120.00),
-(5, 28, 5, 1, 'Checkup', 150.00),
-(6, 91, 6, 1, 'Surgery', 500.00),
-(7, 54, 7, 1, 'Medication', 100.00),
-(8, 7, 8, 1, 'Vaccination', 200.00),
-(9, 33, 9, 1, 'Grooming', 120.00),
-(10, 76, 10, 1, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 1, 37, 1, 1, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 2, 84, 2, 1, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 3, 12, 3, 1, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 4, 65, 4, 1, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 5, 28, 5, 1, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 6, 91, 6, 1, 'Surgery', 500.00;
+EXEC sp_InsertTreatmentService 7, 54, 7, 1, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 8, 7, 8, 1, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 9, 33, 9, 1, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 10, 76, 10, 1, 'Checkup', 150.00;
 
-(11, 19, 11, 2, 'Surgery', 450.00),
-(12, 88, 12, 2, 'Medication', 100.00),
-(13, 46, 13, 2, 'Checkup', 150.00),
-(14, 3, 14, 2, 'Grooming', 120.00),
-(15, 72, 15, 2, 'Vaccination', 200.00),
-(16, 59, 16, 2, 'Medication', 100.00),
-(17, 6, 17, 2, 'Checkup', 150.00),
-(18, 41, 18, 2, 'Surgery', 400.00),
-(19, 97, 19, 2, 'Grooming', 120.00),
-(20, 23, 20, 2, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 11, 19, 11, 2, 'Surgery', 450.00;
+EXEC sp_InsertTreatmentService 12, 88, 12, 2, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 13, 46, 13, 2, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 14, 3, 14, 2, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 15, 72, 15, 2, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 16, 59, 16, 2, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 17, 6, 17, 2, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 18, 41, 18, 2, 'Surgery', 400.00;
+EXEC sp_InsertTreatmentService 19, 97, 19, 2, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 20, 23, 20, 2, 'Checkup', 150.00;
 
-(21, 50, 21, 3, 'Medication', 100.00),
-(22, 12, 22, 3, 'Vaccination', 200.00),
-(23, 81, 23, 3, 'Surgery', 500.00),
-(24, 29, 24, 3, 'Checkup', 150.00),
-(25, 74, 25, 3, 'Grooming', 120.00),
-(26, 37, 26, 3, 'Medication', 100.00),
-(27, 90, 27, 3, 'Checkup', 150.00),
-(28, 15, 28, 3, 'Vaccination', 200.00),
-(29, 68, 29, 3, 'Grooming', 120.00),
-(30, 5, 30, 3, 'Surgery', 450.00),
+EXEC sp_InsertTreatmentService 21, 50, 21, 3, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 22, 12, 22, 3, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 23, 81, 23, 3, 'Surgery', 500.00;
+EXEC sp_InsertTreatmentService 24, 29, 24, 3, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 25, 74, 25, 3, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 26, 37, 26, 3, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 27, 90, 27, 3, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 28, 15, 28, 3, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 29, 68, 29, 3, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 30, 5, 30, 3, 'Surgery', 450.00;
 
-(31, 33, 31, 4, 'Checkup', 150.00),
-(32, 80, 32, 4, 'Medication', 100.00),
-(33, 21, 33, 4, 'Vaccination', 200.00),
-(34, 56, 34, 4, 'Grooming', 120.00),
-(35, 99, 35, 4, 'Surgery', 500.00),
-(36, 8, 36, 4, 'Checkup', 150.00),
-(37, 44, 37, 4, 'Medication', 100.00),
-(38, 61, 38, 4, 'Vaccination', 200.00),
-(39, 13, 39, 4, 'Grooming', 120.00),
-(40, 78, 40, 4, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 31, 33, 31, 4, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 32, 80, 32, 4, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 33, 21, 33, 4, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 34, 56, 34, 4, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 35, 99, 35, 4, 'Surgery', 500.00;
+EXEC sp_InsertTreatmentService 36, 8, 36, 4, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 37, 44, 37, 4, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 38, 61, 38, 4, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 39, 13, 39, 4, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 40, 78, 40, 4, 'Checkup', 150.00;
 
-(41, 27, 41, 5, 'Surgery', 400.00),
-(42, 92, 42, 5, 'Medication', 100.00),
-(43, 35, 43, 5, 'Checkup', 150.00),
-(44, 64, 44, 5, 'Grooming', 120.00),
-(45, 7, 45, 5, 'Vaccination', 200.00),
-(46, 53, 46, 5, 'Medication', 100.00),
-(47, 86, 47, 5, 'Checkup', 150.00),
-(48, 16, 48, 5, 'Surgery', 450.00),
-(49, 72, 49, 5, 'Grooming', 120.00),
-(50, 38, 50, 5, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 41, 27, 41, 5, 'Surgery', 400.00;
+EXEC sp_InsertTreatmentService 42, 92, 42, 5, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 43, 35, 43, 5, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 44, 64, 44, 5, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 45, 7, 45, 5, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 46, 53, 46, 5, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 47, 86, 47, 5, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 48, 16, 48, 5, 'Surgery', 450.00;
+EXEC sp_InsertTreatmentService 49, 72, 49, 5, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 50, 38, 50, 5, 'Checkup', 150.00;
 
-(51, 49, 51, 6, 'Medication', 100.00),
-(52, 5, 52, 6, 'Vaccination', 200.00),
-(53, 90, 53, 6, 'Surgery', 500.00),
-(54, 33, 54, 6, 'Checkup', 150.00),
-(55, 18, 55, 6, 'Grooming', 120.00),
-(56, 75, 56, 6, 'Medication', 100.00),
-(57, 61, 57, 6, 'Checkup', 150.00),
-(58, 12, 58, 6, 'Vaccination', 200.00),
-(59, 87, 59, 6, 'Grooming', 120.00),
-(60, 40, 60, 6, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 51, 49, 51, 6, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 52, 5, 52, 6, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 53, 90, 53, 6, 'Surgery', 500.00;
+EXEC sp_InsertTreatmentService 54, 33, 54, 6, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 55, 18, 55, 6, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 56, 75, 56, 6, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 57, 61, 57, 6, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 58, 12, 58, 6, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 59, 87, 59, 6, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 60, 40, 60, 6, 'Checkup', 150.00;
 
-(61, 14, 61, 7, 'Surgery', 400.00),
-(62, 87, 62, 7, 'Medication', 100.00),
-(63, 45, 63, 7, 'Checkup', 150.00),
-(64, 32, 64, 7, 'Vaccination', 200.00),
-(65, 68, 65, 7, 'Grooming', 120.00),
-(66, 5, 66, 7, 'Medication', 100.00),
-(67, 76, 67, 7, 'Checkup', 150.00),
-(68, 22, 68, 7, 'Surgery', 450.00),
-(69, 93, 69, 7, 'Grooming', 120.00),
-(70, 38, 70, 7, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 61, 14, 61, 7, 'Surgery', 400.00;
+EXEC sp_InsertTreatmentService 62, 87, 62, 7, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 63, 45, 63, 7, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 64, 32, 64, 7, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 65, 68, 65, 7, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 66, 5, 66, 7, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 67, 76, 67, 7, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 68, 22, 68, 7, 'Surgery', 450.00;
+EXEC sp_InsertTreatmentService 69, 93, 69, 7, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 70, 38, 70, 7, 'Checkup', 150.00;
 
-(71, 51, 71, 8, 'Vaccination', 200.00),
-(72, 19, 72, 8, 'Medication', 100.00),
-(73, 84, 73, 8, 'Checkup', 150.00),
-(74, 6, 74, 8, 'Grooming', 120.00),
-(75, 77, 75, 8, 'Surgery', 400.00),
-(76, 43, 76, 8, 'Checkup', 150.00),
-(77, 28, 77, 8, 'Medication', 100.00),
-(78, 95, 78, 8, 'Vaccination', 200.00),
-(79, 12, 79, 8, 'Grooming', 120.00),
-(80, 63, 80, 8, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 71, 51, 71, 8, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 72, 19, 72, 8, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 73, 84, 73, 8, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 74, 6, 74, 8, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 75, 77, 75, 8, 'Surgery', 400.00;
+EXEC sp_InsertTreatmentService 76, 43, 76, 8, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 77, 28, 77, 8, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 78, 95, 78, 8, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 79, 12, 79, 8, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 80, 63, 80, 8, 'Checkup', 150.00;
 
-(81, 41, 81, 9, 'Medication', 100.00),
-(82, 67, 82, 9, 'Checkup', 150.00),
-(83, 9, 83, 9, 'Vaccination', 200.00),
-(84, 74, 84, 9, 'Surgery', 500.00),
-(85, 29, 85, 9, 'Grooming', 120.00),
-(86, 82, 86, 9, 'Checkup', 150.00),
-(87, 57, 87, 9, 'Medication', 100.00),
-(88, 20, 88, 9, 'Vaccination', 200.00),
-(89, 95, 89, 9, 'Grooming', 120.00),
-(90, 36, 90, 9, 'Checkup', 150.00),
+EXEC sp_InsertTreatmentService 81, 41, 81, 9, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 82, 67, 82, 9, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 83, 9, 83, 9, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 84, 74, 84, 9, 'Surgery', 500.00;
+EXEC sp_InsertTreatmentService 85, 29, 85, 9, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 86, 82, 86, 9, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 87, 57, 87, 9, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 88, 20, 88, 9, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 89, 95, 89, 9, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 90, 36, 90, 9, 'Checkup', 150.00;
 
-(91, 13, 91, 10, 'Surgery', 450.00),
-(92, 88, 92, 10, 'Checkup', 150.00),
-(93, 60, 93, 10, 'Medication', 100.00),
-(94, 44, 94, 10, 'Grooming', 120.00),
-(95, 73, 95, 10, 'Checkup', 150.00),
-(96, 25, 96, 10, 'Vaccination', 200.00),
-(97, 97, 97, 10, 'Surgery', 500.00),
-(98, 31, 98, 10, 'Checkup', 150.00),
-(99, 54, 99, 10, 'Medication', 100.00),
-(100, 18, 100, 10, 'Grooming', 120.00);
+EXEC sp_InsertTreatmentService 91, 13, 91, 10, 'Surgery', 450.00;
+EXEC sp_InsertTreatmentService 92, 88, 92, 10, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 93, 60, 93, 10, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 94, 44, 94, 10, 'Grooming', 120.00;
+EXEC sp_InsertTreatmentService 95, 73, 95, 10, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 96, 25, 96, 10, 'Vaccination', 200.00;
+EXEC sp_InsertTreatmentService 97, 97, 97, 10, 'Surgery', 500.00;
+EXEC sp_InsertTreatmentService 98, 31, 98, 10, 'Checkup', 150.00;
+EXEC sp_InsertTreatmentService 99, 54, 99, 10, 'Medication', 100.00;
+EXEC sp_InsertTreatmentService 100, 18, 100, 10, 'Grooming', 120.00;
+
 
 
 -- Serves
-INSERT INTO SERVES (serves_id, pet_id, staff_id, schedule, [status]) VALUES
-(1, 12, 11, '2025-11-22', 1),
-(2, 37, 11, '2025-11-22', 1),
-(3, 55, 11, '2025-11-22', 1),
-(4, 92, 11, '2025-11-22', 1),
-(5, 7,  11, '2025-11-22', 1),
-(6, 84, 11, '2025-11-22', 1),
-(7, 29, 11, '2025-11-22', 1),
-(8, 48, 11, '2025-11-22', 1),
-(9, 11, 11, '2025-11-22', 1),
-(10,66, 11, '2025-11-22', 1),
-(11,22, 12, '2025-11-23', 1),
-(12,91, 12, '2025-11-23', 1),
-(13,7,  12, '2025-11-23', 1),
-(14,48, 12, '2025-11-23', 1),
-(15,63, 12, '2025-11-23', 1),
-(16,35, 12, '2025-11-23', 1),
-(17,84, 12, '2025-11-23', 1),
-(18,19, 12, '2025-11-23', 1),
-(19,72, 12, '2025-11-23', 1),
-(20,57, 12, '2025-11-23', 1),
-(21,5,  13, '2025-11-24', 1),
-(22,88, 13, '2025-11-24', 1),
-(23,34, 13, '2025-11-24', 1),
-(24,72, 13, '2025-11-24', 1),
-(25,16, 13, '2025-11-24', 1),
-(26,49, 13, '2025-11-24', 1),
-(27,61, 13, '2025-11-24', 1),
-(28,27, 13, '2025-11-24', 1),
-(29,93, 13, '2025-11-24', 1),
-(30,11, 13, '2025-11-24', 1),
-(31,38, 14, '2025-11-25', 1),
-(32,76, 14, '2025-11-25', 1),
-(33,19, 14, '2025-11-25', 1),
-(34,64, 14, '2025-11-25', 1),
-(35,5,  14, '2025-11-25', 1),
-(36,87, 14, '2025-11-25', 1),
-(37,23, 14, '2025-11-25', 1),
-(38,90, 14, '2025-11-25', 1),
-(39,56, 14, '2025-11-25', 1),
-(40,12, 14, '2025-11-25', 1),
-(41,34, 15, '2025-11-26', 1),
-(42,7,  15, '2025-11-26', 1),
-(43,61, 15, '2025-11-26', 1),
-(44,98, 15, '2025-11-26', 1),
-(45,45, 15, '2025-11-26', 1),
-(46,29, 15, '2025-11-26', 1),
-(47,80, 15, '2025-11-26', 1),
-(48,53, 15, '2025-11-26', 1),
-(49,16, 15, '2025-11-26', 1),
-(50,72, 15, '2025-11-26', 1),
-(51,12, 16, '2025-11-27', 1),
-(52,44, 16, '2025-11-27', 1),
-(53,77, 16, '2025-11-27', 1),
-(54,3,  16, '2025-11-27', 1),
-(55,91, 16, '2025-11-27', 1),
-(56,66, 16, '2025-11-27', 1),
-(57,28, 16, '2025-11-27', 1),
-(58,53, 16, '2025-11-27', 1),
-(59,35, 16, '2025-11-27', 1),
-(60,82, 16, '2025-11-27', 1),
-(61,23, 17, '2025-11-28', 1),
-(62,87, 17, '2025-11-28', 1),
-(63,45, 17, '2025-11-28', 1),
-(64,12, 17, '2025-11-28', 1),
-(65,34, 17, '2025-11-28', 1),
-(66,56, 17, '2025-11-28', 1),
-(67,78, 17, '2025-11-28', 1),
-(68,9,  17, '2025-11-28', 1),
-(69,67, 17, '2025-11-28', 1),
-(70,41, 17, '2025-11-28', 1),
-(71,5,  18, '2025-11-29', 1),
-(72,62, 18, '2025-11-29', 1),
-(73,30, 18, '2025-11-29', 1),
-(74,89, 18, '2025-11-29', 1),
-(75,47, 18, '2025-11-29', 1),
-(76,18, 18, '2025-11-29', 1),
-(77,99, 18, '2025-11-29', 1),
-(78,36, 18, '2025-11-29', 1),
-(79,74, 18, '2025-11-29', 1),
-(80,50, 18, '2025-11-29', 1),
-(81,13, 19, '2025-11-30', 1),
-(82,69, 19, '2025-11-30', 1),
-(83,24, 19, '2025-11-30', 1),
-(84,88, 19, '2025-11-30', 1),
-(85,37, 19, '2025-11-30', 1),
-(86,61, 19, '2025-11-30', 1),
-(87,92, 19, '2025-11-30', 1),
-(88,7,  19, '2025-11-30', 1),
-(89,55, 19, '2025-11-30', 1),
-(90,33, 19, '2025-11-30', 1),
-(91,42, 20, '2025-12-01', 1),
-(92,81, 20, '2025-12-01', 1),
-(93,14, 20, '2025-12-01', 1),
-(94,63, 20, '2025-12-01', 1),
-(95,26, 20, '2025-12-01', 1),
-(96,97, 20, '2025-12-01', 1),
-(97,51, 20, '2025-12-01', 1),
-(98,34, 20, '2025-12-01', 1),
-(99,75, 20, '2025-12-01', 1),
-(100,9, 20, '2025-12-01', 1),
-(101,38, 11,  '2025-12-02', 1),
-(102,71, 11,  '2025-12-02', 0),
-(103,16, 11,  '2025-12-02', 1),
-(104,84, 11,  '2025-12-02', 0),
-(105,59, 11,  '2025-12-02', 1),
-(106,45, 11,  '2025-12-02', 1),
-(107,28, 11,  '2025-12-02', 1),
-(108,90, 11,  '2025-12-02', 1),
-(109,64, 11,  '2025-12-02', 0),
-(110,11, 11,  '2025-12-02', 1);
+EXEC sp_InsertServes 1, 12, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 2, 37, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 3, 55, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 4, 92, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 5, 7,  11, '2025-11-22', 1;
+EXEC sp_InsertServes 6, 84, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 7, 29, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 8, 48, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 9, 11, 11, '2025-11-22', 1;
+EXEC sp_InsertServes 10,66, 11, '2025-11-22', 1;
+
+EXEC sp_InsertServes 11,22, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 12,91, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 13,7,  12, '2025-11-23', 1;
+EXEC sp_InsertServes 14,48, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 15,63, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 16,35, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 17,84, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 18,19, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 19,72, 12, '2025-11-23', 1;
+EXEC sp_InsertServes 20,57, 12, '2025-11-23', 1;
+
+EXEC sp_InsertServes 21,5,  13, '2025-11-24', 1;
+EXEC sp_InsertServes 22,88, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 23,34, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 24,72, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 25,16, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 26,49, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 27,61, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 28,27, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 29,93, 13, '2025-11-24', 1;
+EXEC sp_InsertServes 30,11, 13, '2025-11-24', 1;
+
+EXEC sp_InsertServes 31,38, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 32,76, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 33,19, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 34,64, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 35,5,  14, '2025-11-25', 1;
+EXEC sp_InsertServes 36,87, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 37,23, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 38,90, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 39,56, 14, '2025-11-25', 1;
+EXEC sp_InsertServes 40,12, 14, '2025-11-25', 1;
+
+EXEC sp_InsertServes 41,34, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 42,7,  15, '2025-11-26', 1;
+EXEC sp_InsertServes 43,61, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 44,98, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 45,45, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 46,29, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 47,80, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 48,53, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 49,16, 15, '2025-11-26', 1;
+EXEC sp_InsertServes 50,72, 15, '2025-11-26', 1;
+
+EXEC sp_InsertServes 51,12, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 52,44, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 53,77, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 54,3,  16, '2025-11-27', 1;
+EXEC sp_InsertServes 55,91, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 56,66, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 57,28, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 58,53, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 59,35, 16, '2025-11-27', 1;
+EXEC sp_InsertServes 60,82, 16, '2025-11-27', 1;
+
+EXEC sp_InsertServes 61,23, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 62,87, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 63,45, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 64,12, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 65,34, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 66,56, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 67,78, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 68,9,  17, '2025-11-28', 1;
+EXEC sp_InsertServes 69,67, 17, '2025-11-28', 1;
+EXEC sp_InsertServes 70,41, 17, '2025-11-28', 1;
+
+EXEC sp_InsertServes 71,5,  18, '2025-11-29', 1;
+EXEC sp_InsertServes 72,62, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 73,30, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 74,89, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 75,47, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 76,18, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 77,99, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 78,36, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 79,74, 18, '2025-11-29', 1;
+EXEC sp_InsertServes 80,50, 18, '2025-11-29', 1;
+
+EXEC sp_InsertServes 81,13, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 82,69, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 83,24, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 84,88, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 85,37, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 86,61, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 87,92, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 88,7,  19, '2025-11-30', 1;
+EXEC sp_InsertServes 89,55, 19, '2025-11-30', 1;
+EXEC sp_InsertServes 90,33, 19, '2025-11-30', 1;
+
+EXEC sp_InsertServes 91,42, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 92,81, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 93,14, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 94,63, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 95,26, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 96,97, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 97,51, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 98,34, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 99,75, 20, '2025-12-01', 1;
+EXEC sp_InsertServes 100,9,  20, '2025-12-01', 1;
+
+EXEC sp_InsertServes 101,38, 11, '2025-12-02', 1;
+EXEC sp_InsertServes 102,71, 11, '2025-12-02', 0;
+EXEC sp_InsertServes 103,16, 11, '2025-12-02', 1;
+EXEC sp_InsertServes 104,84, 11, '2025-12-02', 0;
+EXEC sp_InsertServes 105,59, 11, '2025-12-02', 1;
+EXEC sp_InsertServes 106,45, 11, '2025-12-02', 1;
+EXEC sp_InsertServes 107,28, 11, '2025-12-02', 1;
+EXEC sp_InsertServes 108,90, 11, '2025-12-02', 1;
+EXEC sp_InsertServes 109,64, 11, '2025-12-02', 0;
+EXEC sp_InsertServes 110,11, 11, '2025-12-02', 1;
 
 
 -- Serve Services
-INSERT INTO SERVES_SERVICES (serves_id, pet_id, staff_id, [type], price) VALUES
-(1, 12, 11, 'Grooming Basic', 50.00),
-(2, 37, 11, 'Grooming Premium', 80.00),
-(3, 55, 11, 'Nail Trim', 20.00),
-(4, 92, 11, 'Bath', 30.00),
-(5, 7,  11, 'Fur Treatment', 45.00),
-(6, 84, 11, 'Ear Cleaning', 25.00),
-(7, 29, 11, 'Teeth Brushing', 15.00),
-(8, 48, 11, 'Flea Treatment', 40.00),
-(9, 11, 11, 'De-shedding', 35.00),
-(10,66, 11, 'Massage', 55.00),
+EXEC sp_InsertServesService 1, 12, 11, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 2, 37, 11, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 3, 55, 11, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 4, 92, 11, 'Bath', 30.00;
+EXEC sp_InsertServesService 5, 7, 11, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 6, 84, 11, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 7, 29, 11, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 8, 48, 11, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 9, 11, 11, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 110, 11, 11, 'Massage', 55.00;
 
-(11,22, 12, 'Grooming Basic', 50.00),
-(12,91, 12, 'Grooming Premium', 80.00),
-(13,7,  12, 'Nail Trim', 20.00),
-(14,48, 12, 'Bath', 30.00),
-(15,63, 12, 'Fur Treatment', 45.00),
-(16,35, 12, 'Ear Cleaning', 25.00),
-(17,84, 12, 'Teeth Brushing', 15.00),
-(18,19, 12, 'Flea Treatment', 40.00),
-(19,72, 12, 'De-shedding', 35.00),
-(20,57, 12, 'Massage', 55.00),
+EXEC sp_InsertServesService 11, 22, 12, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 12, 91, 12, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 13, 7, 12, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 14, 48, 12, 'Bath', 30.00;
+EXEC sp_InsertServesService 15, 63, 12, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 16, 35, 12, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 17, 84, 12, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 18, 19, 12, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 19, 72, 12, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 20, 57, 12, 'Massage', 55.00;
 
-(21,5,  13, 'Grooming Basic', 50.00),
-(22,88, 13, 'Grooming Premium', 80.00),
-(23,34, 13, 'Nail Trim', 20.00),
-(24,72, 13, 'Bath', 30.00),
-(25,16, 13, 'Fur Treatment', 45.00),
-(26,49, 13, 'Ear Cleaning', 25.00),
-(27,61, 13, 'Teeth Brushing', 15.00),
-(28,27, 13, 'Flea Treatment', 40.00),
-(29,93, 13, 'De-shedding', 35.00),
-(30,11, 13, 'Massage', 55.00),
+EXEC sp_InsertServesService 21, 5, 13, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 22, 88, 13, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 23, 34, 13, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 24, 72, 13, 'Bath', 30.00;
+EXEC sp_InsertServesService 25, 16, 13, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 26, 49, 13, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 27, 61, 13, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 28, 27, 13, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 29, 93, 13, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 30, 11, 13, 'Massage', 55.00;
 
-(31,38, 14, 'Grooming Basic', 50.00),
-(32,76, 14, 'Grooming Premium', 80.00),
-(33,19, 14, 'Nail Trim', 20.00),
-(34,64, 14, 'Bath', 30.00),
-(35,5,  14, 'Fur Treatment', 45.00),
-(36,87, 14, 'Ear Cleaning', 25.00),
-(37,23, 14, 'Teeth Brushing', 15.00),
-(38,90, 14, 'Flea Treatment', 40.00),
-(39,56, 14, 'De-shedding', 35.00),
-(40,12, 14, 'Massage', 55.00),
+EXEC sp_InsertServesService 31, 38, 14, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 32, 76, 14, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 33, 19, 14, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 34, 64, 14, 'Bath', 30.00;
+EXEC sp_InsertServesService 35, 5, 14, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 36, 87, 14, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 37, 23, 14, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 38, 90, 14, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 39, 56, 14, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 40, 12, 14, 'Massage', 55.00;
 
-(41,34, 15, 'Grooming Basic', 50.00),
-(42,7,  15, 'Grooming Premium', 80.00),
-(43,61, 15, 'Nail Trim', 20.00),
-(44,98, 15, 'Bath', 30.00),
-(45,45, 15, 'Fur Treatment', 45.00),
-(46,29, 15, 'Ear Cleaning', 25.00),
-(47,80, 15, 'Teeth Brushing', 15.00),
-(48,53, 15, 'Flea Treatment', 40.00),
-(49,16, 15, 'De-shedding', 35.00),
-(50,72, 15, 'Massage', 55.00),
+EXEC sp_InsertServesService 41, 34, 15, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 42, 7, 15, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 43, 61, 15, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 44, 98, 15, 'Bath', 30.00;
+EXEC sp_InsertServesService 45, 45, 15, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 46, 29, 15, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 47, 80, 15, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 48, 53, 15, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 49, 16, 15, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 50, 72, 15, 'Massage', 55.00;
 
-(51,12, 16, 'Grooming Basic', 50.00),
-(52,44, 16, 'Grooming Premium', 80.00),
-(53,77, 16, 'Nail Trim', 20.00),
-(54,3,  16, 'Bath', 30.00),
-(55,91, 16, 'Fur Treatment', 45.00),
-(56,66, 16, 'Ear Cleaning', 25.00),
-(57,28, 16, 'Teeth Brushing', 15.00),
-(58,53, 16, 'Flea Treatment', 40.00),
-(59,35, 16, 'De-shedding', 35.00),
-(60,82, 16, 'Massage', 55.00),
+EXEC sp_InsertServesService 51, 12, 16, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 52, 44, 16, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 53, 77, 16, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 54, 3, 16, 'Bath', 30.00;
+EXEC sp_InsertServesService 55, 91, 16, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 56, 66, 16, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 57, 28, 16, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 58, 53, 16, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 59, 35, 16, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 60, 82, 16, 'Massage', 55.00;
 
-(61,23, 17, 'Grooming Basic', 50.00),
-(62,87, 17, 'Grooming Premium', 80.00),
-(63,45, 17, 'Nail Trim', 20.00),
-(64,12, 17, 'Bath', 30.00),
-(65,34, 17, 'Fur Treatment', 45.00),
-(66,56, 17, 'Ear Cleaning', 25.00),
-(67,78, 17, 'Teeth Brushing', 15.00),
-(68,9,  17, 'Flea Treatment', 40.00),
-(69,67, 17, 'De-shedding', 35.00),
-(70,41, 17, 'Massage', 55.00),
+EXEC sp_InsertServesService 61, 23, 17, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 62, 87, 17, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 63, 45, 17, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 64, 12, 17, 'Bath', 30.00;
+EXEC sp_InsertServesService 65, 34, 17, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 66, 56, 17, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 67, 78, 17, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 68, 9, 17, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 69, 67, 17, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 70, 41, 17, 'Massage', 55.00;
 
-(71,5,  18, 'Grooming Basic', 50.00),
-(72,62, 18, 'Grooming Premium', 80.00),
-(73,30, 18, 'Nail Trim', 20.00),
-(74,89, 18, 'Bath', 30.00),
-(75,47, 18, 'Fur Treatment', 45.00),
-(76,18, 18, 'Ear Cleaning', 25.00),
-(77,99, 18, 'Teeth Brushing', 15.00),
-(78,36, 18, 'Flea Treatment', 40.00),
-(79,74, 18, 'De-shedding', 35.00),
-(80,50, 18, 'Massage', 55.00),
+EXEC sp_InsertServesService 71, 5, 18, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 72, 62, 18, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 73, 30, 18, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 74, 89, 18, 'Bath', 30.00;
+EXEC sp_InsertServesService 75, 47, 18, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 76, 18, 18, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 77, 99, 18, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 78, 36, 18, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 79, 74, 18, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 80, 50, 18, 'Massage', 55.00;
 
-(81,13, 19, 'Grooming Basic', 50.00),
-(82,69, 19, 'Grooming Premium', 80.00),
-(83,24, 19, 'Nail Trim', 20.00),
-(84,88, 19, 'Bath', 30.00),
-(85,37, 19, 'Fur Treatment', 45.00),
-(86,61, 19, 'Ear Cleaning', 25.00),
-(87,92, 19, 'Teeth Brushing', 15.00),
-(88,7,  19, 'Flea Treatment', 40.00),
-(89,55, 19, 'De-shedding', 35.00),
-(90,33, 19, 'Massage', 55.00),
+EXEC sp_InsertServesService 81, 13, 19, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 82, 69, 19, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 83, 24, 19, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 84, 88, 19, 'Bath', 30.00;
+EXEC sp_InsertServesService 85, 37, 19, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 86, 61, 19, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 87, 92, 19, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 88, 7, 19, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 89, 55, 19, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 90, 33, 19, 'Massage', 55.00;
 
-(91,42, 20, 'Grooming Basic', 50.00),
-(92,81, 20, 'Grooming Premium', 80.00),
-(93,14, 20, 'Nail Trim', 20.00),
-(94,63, 20, 'Bath', 30.00),
-(95,26, 20, 'Fur Treatment', 45.00),
-(96,97, 20, 'Ear Cleaning', 25.00),
-(97,51, 20, 'Teeth Brushing', 15.00),
-(98,34, 20, 'Flea Treatment', 40.00),
-(99,75, 20, 'De-shedding', 35.00),
-(100,9, 20, 'Massage', 55.00),
+EXEC sp_InsertServesService 91, 42, 20, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 92, 81, 20, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 93, 14, 20, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 94, 63, 20, 'Bath', 30.00;
+EXEC sp_InsertServesService 95, 26, 20, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 96, 97, 20, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 97, 51, 20, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 98, 34, 20, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 99, 75, 20, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 100, 9, 20, 'Massage', 55.00;
 
-(101,38, 11, 'Grooming Basic', 50.00),
-(102,71, 11, 'Grooming Premium', 80.00),
-(103,16, 11, 'Nail Trim', 20.00),
-(104,84, 11, 'Bath', 30.00),
-(105,59, 11, 'Fur Treatment', 45.00),
-(106,45, 11, 'Ear Cleaning', 25.00),
-(107,28, 11, 'Teeth Brushing', 15.00),
-(108,90, 11, 'Flea Treatment', 40.00),
-(109,64, 11, 'De-shedding', 35.00),
-(110,11, 11, 'Massage', 55.00);
+EXEC sp_InsertServesService 101, 38, 11, 'Grooming Basic', 50.00;
+EXEC sp_InsertServesService 102, 71, 11, 'Grooming Premium', 80.00;
+EXEC sp_InsertServesService 103, 16, 11, 'Nail Trim', 20.00;
+EXEC sp_InsertServesService 104, 84, 11, 'Bath', 30.00;
+EXEC sp_InsertServesService 105, 59, 11, 'Fur Treatment', 45.00;
+EXEC sp_InsertServesService 106, 45, 11, 'Ear Cleaning', 25.00;
+EXEC sp_InsertServesService 107, 28, 11, 'Teeth Brushing', 15.00;
+EXEC sp_InsertServesService 108, 90, 11, 'Flea Treatment', 40.00;
+EXEC sp_InsertServesService 109, 64, 11, 'De-shedding', 35.00;
+EXEC sp_InsertServesService 110, 11, 11, 'Massage', 55.00;
+
 
 -- Pays
 INSERT INTO PAYS (payment_id, cust_id, staff_id, pay_method, [datetime]) VALUES
